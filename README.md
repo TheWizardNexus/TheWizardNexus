@@ -53,11 +53,9 @@ The broader **TWiN ecosystem** turns that mission into practical infrastructure 
       <p><a href="https://thewizardnexus.github.io/SpellWire/"><strong>Explore the public guide &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
-      <p align="center">
-        <a href="https://thewizardnexus.github.io/TWiN-Compass/">
-          <img src="https://thewizardnexus.github.io/TWiN-Compass/assets/twin_compass_mark_512.jpg" width="210" alt="TWiN Compass mark">
-        </a>
-      </p>
+      <a href="https://thewizardnexus.github.io/TWiN-Compass/">
+        <img src="assets/twin-compass-readme-header.png" width="100%" alt="TWiN Compass — moral direction and behavioral-health awareness">
+      </a>
       <h3><a href="https://thewizardnexus.github.io/TWiN-Compass/">TWiN Compass</a></h3>
       <p>A moral, ethical, culturally aware, behavioral-health-informed AI layer that helps purpose-built models reason and communicate more safely while keeping people accountable.</p>
       <p><a href="https://thewizardnexus.github.io/TWiN-Compass/"><strong>Explore TWiN Compass &rarr;</strong></a></p>
