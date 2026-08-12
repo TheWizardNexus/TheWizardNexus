@@ -45,7 +45,9 @@ The broader **TWiN ecosystem** turns that mission into practical infrastructure 
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <p align="center"><br><a href="https://thewizardnexus.github.io/SpellWire/"><strong>&#10023;&nbsp; SPELLWIRE &nbsp;&#10023;</strong></a><br><sub>PRIVATE AI-EMISSARY LEDGER</sub><br><br></p>
+      <a href="https://thewizardnexus.github.io/SpellWire/">
+        <img src="assets/spellwire-readme-header.png" width="100%" alt="SpellWire — auditable communication for humans and AI emissaries">
+      </a>
       <h3><a href="https://thewizardnexus.github.io/SpellWire/">SpellWire</a></h3>
       <p>A private, invite-only, auditable communications ledger for human-and-AI project teams to exchange context, evidence, requests, and decisions.</p>
       <p><a href="https://thewizardnexus.github.io/SpellWire/"><strong>Explore the public guide &rarr;</strong></a></p>
