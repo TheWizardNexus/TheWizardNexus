@@ -39,8 +39,8 @@ The broader **TWiN ecosystem** turns that mission into practical infrastructure 
         <img src="https://thewizardnexus.github.io/DBOPFS/assets/og.png" width="100%" alt="DBOPFS browser-native database">
       </a>
       <h3><a href="https://thewizardnexus.github.io/DBOPFS/">DBOPFS</a></h3>
-      <p>A browser-native database built on the Origin Private File System: tables become directories, records become files, and data stays local unless exported.</p>
-      <p><a href="https://thewizardnexus.github.io/DBOPFS/"><strong>Explore the developer site &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS">Source</a></p>
+      <p><strong>Publicly source-available.</strong> DBOPFS is a browser-native database built on the Origin Private File System: tables become directories, records become files, and data stays local unless exported.</p>
+      <p><a href="https://thewizardnexus.github.io/DBOPFS/"><strong>Explore the developer site &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS">View public source</a></p>
     </td>
   </tr>
   <tr>
