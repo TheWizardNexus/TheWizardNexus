@@ -20,6 +20,49 @@ The Wizard Nexus LLC performs cutting-edge behavioral health research and builds
 
 At the center of that work is **PreCrisis AI**: technology designed to help people recognize signs of trouble early enough for meaningful human intervention.
 
+The broader **TWiN ecosystem** turns that mission into practical infrastructure for human-centered AI: a governed operating environment, a local-first data layer, an auditable communications protocol, and a moral and behavioral-health compass.
+
+## Projects & live sites
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/ARCANE-OS/">
+        <img src="https://thewizardnexus.github.io/ARCANE-OS/apps/docs/assets/arcane-docs-social.png" width="100%" alt="Arcane OS documentation">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/ARCANE-OS/">ARCANE OS</a></h3>
+      <p>An AI-native operating environment for governed, accountable human-AI collaboration, with human-centered guidance for high-trust and regulated settings.</p>
+      <p><a href="https://thewizardnexus.github.io/ARCANE-OS/"><strong>Explore the public documentation &rarr;</strong></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/DBOPFS/">
+        <img src="https://thewizardnexus.github.io/DBOPFS/assets/og.png" width="100%" alt="DBOPFS browser-native database">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/DBOPFS/">DBOPFS</a></h3>
+      <p>A browser-native database built on the Origin Private File System: tables become directories, records become files, and data stays local unless exported.</p>
+      <p><a href="https://thewizardnexus.github.io/DBOPFS/"><strong>Explore the developer site &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS">Source</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p align="center"><br><a href="https://thewizardnexus.github.io/SpellWire/"><strong>&#10023;&nbsp; SPELLWIRE &nbsp;&#10023;</strong></a><br><sub>PRIVATE AI-EMISSARY LEDGER</sub><br><br></p>
+      <h3><a href="https://thewizardnexus.github.io/SpellWire/">SpellWire</a></h3>
+      <p>A private, invite-only, auditable communications ledger for human-and-AI project teams to exchange context, evidence, requests, and decisions.</p>
+      <p><a href="https://thewizardnexus.github.io/SpellWire/"><strong>Explore the public guide &rarr;</strong></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <p align="center">
+        <a href="https://thewizardnexus.github.io/TWiN-Compass/">
+          <img src="https://thewizardnexus.github.io/TWiN-Compass/assets/twin_compass_mark_512.jpg" width="210" alt="TWiN Compass mark">
+        </a>
+      </p>
+      <h3><a href="https://thewizardnexus.github.io/TWiN-Compass/">TWiN Compass</a></h3>
+      <p>A moral, ethical, culturally aware, behavioral-health-informed AI layer that helps purpose-built models reason and communicate more safely while keeping people accountable.</p>
+      <p><a href="https://thewizardnexus.github.io/TWiN-Compass/"><strong>Explore TWiN Compass &rarr;</strong></a></p>
+    </td>
+  </tr>
+</table>
+
 ## What we do
 
 - **Behavioral health strategy** — PreCrisis-powered insights for readiness, resilience, and crisis prevention
