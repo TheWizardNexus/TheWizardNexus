@@ -61,6 +61,16 @@ The broader **TWiN ecosystem** turns that mission into practical infrastructure 
       <p><a href="https://thewizardnexus.github.io/TWiN-Compass/"><strong>Explore TWiN Compass &rarr;</strong></a></p>
     </td>
   </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Toshokann/">
+        <img src="https://thewizardnexus.github.io/Toshokann/assets/toshokann-knowledge-hall.png" width="100%" alt="Toshokann &mdash; a home for knowledge">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Toshokann/">Toshokann</a></h3>
+      <p>A neutral, extensible foundation for organizing, retaining, finding, and sharing institutional knowledge&mdash;built to become a Library, Archive, repository, or information-sharing home.</p>
+      <p><a href="https://thewizardnexus.github.io/Toshokann/"><strong>Explore Toshokann &rarr;</strong></a></p>
+    </td>
+  </tr>
 </table>
 
 ## What we do
