@@ -24,6 +24,8 @@ The broader **TWiN ecosystem** turns that mission into practical infrastructure 
 
 ## Projects & live sites
 
+Every published TWiN GitHub Pages site is included below, including public sites backed by private repositories. A public site does not imply public source.
+
 <table>
   <tr>
     <td width="50%" valign="top">
@@ -35,43 +37,119 @@ The broader **TWiN ecosystem** turns that mission into practical infrastructure 
       <p><a href="https://thewizardnexus.github.io/ARCANE-OS/"><strong>Explore the public documentation &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/arcane-os-sdk/">
+        <img src="https://thewizardnexus.github.io/arcane-os-sdk/assets/arcane-os-sdk-readme-header.png" width="100%" alt="Arcane OS SDK for building applications inside or outside Arcane OS">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/arcane-os-sdk/">Arcane OS SDK</a></h3>
+      <p>A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside the Arcane OS checkout.</p>
+      <p><a href="https://thewizardnexus.github.io/arcane-os-sdk/"><strong>Explore the SDK &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/arcane-os-sdk">View public repository</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/AX/">
+        <img src="https://thewizardnexus.github.io/AX/public/og.png" width="100%" alt="Arcane Exchange &mdash; the AI bazaar between worlds">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/AX/">Arcane Exchange (AX)</a></h3>
+      <p>A wizard-space bazaar for Arcane applications, AI tools, public catalogs, and private portals.</p>
+      <p><a href="https://thewizardnexus.github.io/AX/"><strong>Enter the Exchange &rarr;</strong></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Astrolabe/">
+        <img src="https://thewizardnexus.github.io/Astrolabe/assets/astrolabe-readme-header.png" width="100%" alt="Astrolabe &mdash; navigate the TWiN ecosystem">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Astrolabe/">Astrolabe</a></h3>
+      <p>An interactive map that makes the TWiN ecosystem understandable and navigable across foundations, platforms, products, programs, audiences, funding, and native hosts.</p>
+      <p><a href="https://thewizardnexus.github.io/Astrolabe/"><strong>Navigate the ecosystem &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/Astrolabe">View public repository</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <a href="https://thewizardnexus.github.io/DBOPFS/">
         <img src="https://thewizardnexus.github.io/DBOPFS/assets/og.png" width="100%" alt="DBOPFS browser-native database">
       </a>
       <h3><a href="https://thewizardnexus.github.io/DBOPFS/">DBOPFS</a></h3>
       <p><strong>Publicly source-available.</strong> DBOPFS is a browser-native database built on the Origin Private File System: tables become directories, records become files, and data stays local unless exported.</p>
-      <p><a href="https://thewizardnexus.github.io/DBOPFS/"><strong>Explore the developer site &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS">View public source</a></p>
+      <p><a href="https://thewizardnexus.github.io/DBOPFS/"><strong>Explore the developer site &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS">View public repository</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/DBOPFS-Studio/">
+        <img src="https://raw.githubusercontent.com/TheWizardNexus/DBOPFS-Studio/main/assets/dbopfs-studio-readme-header.png" width="100%" alt="DBOPFS Studio &mdash; browser data made legible">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/DBOPFS-Studio/">DBOPFS Studio</a></h3>
+      <p>A Chromium workspace for exploring, editing, previewing, printing, and managing DBOPFS application data stored in OPFS.</p>
+      <p><a href="https://thewizardnexus.github.io/DBOPFS-Studio/"><strong>Explore DBOPFS Studio &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS-Studio">View public repository</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <a href="https://thewizardnexus.github.io/SpellWire/">
-        <img src="assets/spellwire-readme-header.png" width="100%" alt="SpellWire — auditable communication for humans and AI emissaries">
+        <img src="assets/spellwire-readme-header.png" width="100%" alt="SpellWire &mdash; auditable communication for humans and AI emissaries">
       </a>
       <h3><a href="https://thewizardnexus.github.io/SpellWire/">SpellWire</a></h3>
       <p>A private, invite-only, auditable communications ledger for human-and-AI project teams to exchange context, evidence, requests, and decisions.</p>
       <p><a href="https://thewizardnexus.github.io/SpellWire/"><strong>Explore the public guide &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Toshokann/">
+        <img src="https://thewizardnexus.github.io/Toshokann/assets/toshokann-knowledge-hall.png" width="100%" alt="Toshokann &mdash; a home for knowledge">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Toshokann/">Toshokann</a></h3>
+      <p>A neutral, extensible foundation for organizing, retaining, finding, and sharing institutional knowledge&mdash;built to become a library, archive, repository, or information-sharing home.</p>
+      <p><a href="https://thewizardnexus.github.io/Toshokann/"><strong>Explore Toshokann &rarr;</strong></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <a href="https://thewizardnexus.github.io/TWiN-Compass/">
-        <img src="assets/twin-compass-readme-header.png" width="100%" alt="TWiN Compass — moral direction and behavioral-health awareness">
+        <img src="assets/twin-compass-readme-header.png" width="100%" alt="TWiN Compass &mdash; moral direction and behavioral-health awareness">
       </a>
       <h3><a href="https://thewizardnexus.github.io/TWiN-Compass/">TWiN Compass</a></h3>
       <p>A moral, ethical, culturally aware, behavioral-health-informed AI layer that helps purpose-built models reason and communicate more safely while keeping people accountable.</p>
       <p><a href="https://thewizardnexus.github.io/TWiN-Compass/"><strong>Explore TWiN Compass &rarr;</strong></a></p>
     </td>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/KEMPO/">
+        <img src="https://thewizardnexus.github.io/KEMPO/public/og.png" width="100%" alt="KEMPO &mdash; ancient judgment for future intelligence">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/KEMPO/">KEMPO</a></h3>
+      <p>A human-scored, 100-prompt evaluation of AI judgment across behavioral-safety, ethics, cyber, crisis, and public-safety categories.</p>
+      <p><a href="https://thewizardnexus.github.io/KEMPO/"><strong>Explore KEMPO &rarr;</strong></a></p>
+    </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://thewizardnexus.github.io/Toshokann/">
-        <img src="https://thewizardnexus.github.io/Toshokann/assets/toshokann-knowledge-hall.png" width="100%" alt="Toshokann &mdash; a home for knowledge">
+      <a href="https://thewizardnexus.github.io/Sentinel/">
+        <img src="https://thewizardnexus.github.io/Sentinel/public/og.png" width="100%" alt="Sentinel &mdash; provenance-first investigative intelligence">
       </a>
-      <h3><a href="https://thewizardnexus.github.io/Toshokann/">Toshokann</a></h3>
-      <p>A neutral, extensible foundation for organizing, retaining, finding, and sharing institutional knowledge&mdash;built to become a Library, Archive, repository, or information-sharing home.</p>
-      <p><a href="https://thewizardnexus.github.io/Toshokann/"><strong>Explore Toshokann &rarr;</strong></a></p>
+      <h3><a href="https://thewizardnexus.github.io/Sentinel/">Sentinel</a></h3>
+      <p>Provenance-first investigative intelligence that turns complex records into source-cited, human-reviewed leads and actionable reports.</p>
+      <p><a href="https://thewizardnexus.github.io/Sentinel/"><strong>Explore Sentinel &rarr;</strong></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Scamurai/">
+        <img src="https://thewizardnexus.github.io/Scamurai/public/og.png" width="100%" alt="Scamurai &mdash; detect deception and defend the human">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Scamurai/">Scamurai</a></h3>
+      <p>A human-centered scam and abuse defense suite built around evidence, explanation, consent, and agency.</p>
+      <p><a href="https://thewizardnexus.github.io/Scamurai/"><strong>Explore Scamurai &rarr;</strong></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Redress/">
+        <img src="https://thewizardnexus.github.io/Redress/public/og.png" width="100%" alt="Redress &mdash; a source-grounded legal-practice workbench">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Redress/">Redress</a></h3>
+      <p>A source-grounded legal-practice workbench for organizing records, tracing material claims to evidence, and preparing analysis, drafts, research, and hearings for human review.</p>
+      <p><a href="https://thewizardnexus.github.io/Redress/"><strong>Explore Redress &rarr;</strong></a></p>
     </td>
   </tr>
 </table>
+
+**Publishing next:** PreCrisis, SDE, and Warrior Spirit Companion have GitHub Pages configured but do not yet have published sites. They will be linked here after their first deployments are live.
+
+All public TWiN project repositories are represented above. [View this profile's public repository &rarr;](https://github.com/TheWizardNexus/TheWizardNexus)
 
 ## What we do
 
