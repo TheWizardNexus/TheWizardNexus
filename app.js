@@ -314,7 +314,7 @@ function drawChart() {
   context.stroke();
 
   state.chartPlot = { width, padding, plotWidth, coordinates };
-  canvas.setAttribute("aria-label", `${numberFormatter.format(points.reduce((sum, point) => sum + point.value, 0))} recorded NPM downloads from ${formatDate(points[0].date)} through ${formatDate(points.at(-1).date)}. A complete daily table follows the chart.`);
+  canvas.setAttribute("aria-label", `${numberFormatter.format(points.reduce((sum, point) => sum + point.value, 0))} official npm range downloads from ${formatDate(points[0].date)} through ${formatDate(points.at(-1).date)}. A complete daily table follows the chart.`);
 }
 
 function updateChartTooltip(event) {
@@ -346,29 +346,32 @@ function renderNpm() {
   const history = state.npmHistory;
   const fromYear = history.period.availableFrom.slice(0, 4);
   const untilYear = history.period.availableUntil.slice(0, 4);
-  elements.npmChartKicker.textContent = fromYear === untilYear ? `Recorded ${fromYear} history` : `Recorded ${fromYear}–${untilYear} history`;
+  elements.npmChartKicker.textContent = fromYear === untilYear ? `Official ${fromYear} range` : `Official ${fromYear}–${untilYear} range`;
   elements.npmHistoryTotal.textContent = numberFormatter.format(history.total);
   elements.npmWeek.textContent = numberFormatter.format(state.npm.totals.week);
   elements.npmMonth.textContent = numberFormatter.format(state.npm.totals.month);
   elements.npmYear.textContent = numberFormatter.format(state.npm.totals.year);
-  elements.npmChartPeriod.textContent = `${formatDate(history.period.availableFrom)}–${formatDate(history.period.availableUntil)} · daily verified series`;
+  elements.npmChartPeriod.textContent = `${formatDate(history.period.availableFrom)}–${formatDate(history.period.availableUntil)} · official daily range series`;
   elements.npmFirstDay.textContent = history.firstRecordedDay ? `${formatDate(history.firstRecordedDay.date)} · ${numberFormatter.format(history.firstRecordedDay.downloads)}` : "No recorded downloads";
   elements.npmPeakDay.textContent = history.peakDay ? `${formatDate(history.peakDay.date)} · ${numberFormatter.format(history.peakDay.downloads)}` : "No recorded downloads";
-  elements.npmCoverage.textContent = `${numberFormatter.format(history.dates.length)} finalized days · ${numberFormatter.format(history.packageCount)} ${history.packageCount === 1 ? "module" : "modules"}`;
+  elements.npmCoverage.textContent = `${numberFormatter.format(history.dates.length)} official range days · ${numberFormatter.format(history.packageCount)} ${history.packageCount === 1 ? "module" : "modules"}`;
   const refreshed = `refreshed ${formatTimestamp(history.generatedAt)}`;
   if (!history.dataQuality.referenceAvailable) {
-    elements.npmStatus.textContent = `Official NPM daily series recorded; npm-stat cross-check temporarily unavailable · ${refreshed}`;
+    elements.npmStatus.textContent = `Official npm range series is authoritative; optional npm-stat comparison unavailable · ${refreshed}`;
   } else if (history.dataQuality.exactMatch) {
-    elements.npmStatus.textContent = `Official NPM daily series exactly matches the npm-stat reference point for point · ${refreshed}`;
+    elements.npmStatus.textContent = `Official npm range series is authoritative; optional npm-stat comparison matches point for point · ${refreshed}`;
   } else {
-    const correction = history.dataQuality.correction;
-    const correctionSummary = correction === 0
-      ? "point-level differences net to zero"
-      : `${numberFormatter.format(Math.abs(correction))} net ${correction > 0 ? "additional" : "fewer"} downloads`;
-    elements.npmStatus.textContent = `Official NPM record reconciles the npm-stat reference: ${correctionSummary} · ${refreshed}`;
+    const officialMinusNpmStat = history.dataQuality.officialMinusNpmStat;
+    const missing = history.dataQuality.referenceMissingPointCount;
+    const comparisonSummary = missing > 0
+      ? `${numberFormatter.format(missing)} comparison ${missing === 1 ? "day is" : "days are"} missing`
+      : officialMinusNpmStat === 0
+        ? "point-level differences net to zero"
+        : `comparison total is ${numberFormatter.format(Math.abs(officialMinusNpmStat))} ${officialMinusNpmStat > 0 ? "lower" : "higher"}`;
+    elements.npmStatus.textContent = `Official npm range series remains published unchanged; optional npm-stat ${comparisonSummary} · ${refreshed}`;
   }
 
-  elements.npmDailyCaption.textContent = `Daily NPM downloads for all maintained modules from ${formatDate(history.period.availableFrom)} through ${formatDate(history.period.availableUntil)}`;
+  elements.npmDailyCaption.textContent = `Official daily npm range downloads for all maintained modules from ${formatDate(history.period.availableFrom)} through ${formatDate(history.period.availableUntil)}`;
   elements.npmDailyBody.innerHTML = history.dates.map((date, index) => `<tr><th scope="row"><time datetime="${escapeHtml(date)}">${escapeHtml(formatDate(date))}</time></th><td>${numberFormatter.format(history.overall[index])}</td></tr>`).join("");
 
   elements.packageList.innerHTML = state.npm.packages.map((pkg) => `<article class="package-row"><div><strong>${escapeHtml(pkg.name)} · v${escapeHtml(pkg.version)}</strong><span>${escapeHtml(pkg.description)} · ${escapeHtml(pkg.license || "license not listed")} · ${numberFormatter.format(pkg.downloads.year)} rolling-year downloads</span></div><a href="${escapeHtml(pkg.links.npm)}">NPM ↗</a></article>`).join("");

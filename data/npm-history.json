@@ -1,17 +1,22 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-17T18:41:28.913Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-17T19:04:28.075Z",
   "maintainer": "thewizardnexus",
   "source": {
     "referenceProvider": "npm-stat.com",
     "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-08-15",
     "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-08-16",
-    "authority": "Official NPM download-count API",
+    "referenceRole": "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
+    "authority": "Official npm download-count range API; sole authority for every published daily value and total.",
+    "authorityDocumentation": "https://github.com/npm/registry/blob/main/docs/download-counts.md",
+    "availabilityUrls": [
+      "https://api.npmjs.org/downloads/range/last-day/dbopfs"
+    ],
     "officialUrls": [
       "https://api.npmjs.org/downloads/range/2026-01-01:2026-08-15/dbopfs"
     ],
     "semantics": "Successful package-tarball downloads, not unique people or verified installations.",
-    "freshness": "The available-until date follows NPM's latest finalized rolling-window endpoint."
+    "freshness": "The available-until date follows npm's official range/last-day endpoint, capped at the completed UTC day."
   },
   "period": {
     "requestedFrom": "2026-01-01",
@@ -482,12 +487,13 @@
   "dataQuality": {
     "officialTotal": 132,
     "npmStatReferenceTotal": 132,
-    "correction": 0,
+    "officialMinusNpmStat": 0,
+    "publishedTotalSource": "official npm range series",
     "correctedPointCount": 0,
     "referenceMissingPointCount": 0,
     "referenceAvailable": true,
     "exactMatch": true,
-    "status": "official series matches npm-stat reference point for point"
+    "status": "official range series matches the optional npm-stat comparison point for point"
   },
   "firstRecordedDay": {
     "date": "2026-08-11",

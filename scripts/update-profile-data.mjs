@@ -1,7 +1,7 @@
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { classifyReferenceQuality } from "./telemetry-quality.mjs";
+import { classifyReferenceQuality, compareReferenceSeries, summarizeOfficialRange } from "./telemetry-quality.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_DIR = path.join(ROOT, "data");
@@ -178,12 +178,6 @@ function repositoryExplanation(repo) {
   return `${title} is a public ${language}project in the TWiN ecosystem; its repository does not yet publish a one-line summary.`;
 }
 
-function normalizedCount(value, label) {
-  const count = Number(value);
-  if (!Number.isSafeInteger(count) || count < 0) throw new Error(`Invalid download count for ${label}.`);
-  return count;
-}
-
 function compactNumber(value) {
   return new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }).format(value);
 }
@@ -222,7 +216,7 @@ function createSignalSvg({ projects, repoSnapshot, npmSnapshot, historySnapshot 
     ["LIVE INTERFACES", projects.published.length, "published sites and guides"],
     ["MAPPED POINTS", projects.mapSnapshot.points, `${projects.mapSnapshot.relationships} recorded relationships`],
     ["PUBLIC REPOSITORIES", repoSnapshot.counts.total, `${repoSnapshot.counts.stars} stars received`],
-    ["NPM MODULES", npmSnapshot.packageCount, `${fullNumber(historySnapshot.total)} recorded downloads`],
+    ["NPM MODULES", npmSnapshot.packageCount, `${fullNumber(historySnapshot.total)} official-range downloads`],
   ];
   const cards = metrics.map(([label, value, detail], index) => {
     const x = 48 + (index * 226);
@@ -236,7 +230,7 @@ function createSignalSvg({ projects, repoSnapshot, npmSnapshot, historySnapshot 
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="980" height="510" viewBox="0 0 980 510" role="img" aria-labelledby="title description">
   <title id="title">The Wizard Nexus public ecosystem signal</title>
-  <desc id="description">${projects.published.length} live project interfaces, ${projects.mapSnapshot.points} mapped points, ${projects.mapSnapshot.relationships} relationships, ${repoSnapshot.counts.total} public repositories, and ${historySnapshot.total} recorded NPM downloads.</desc>
+  <desc id="description">${projects.published.length} live project interfaces, ${projects.mapSnapshot.points} mapped points, ${projects.mapSnapshot.relationships} relationships, ${repoSnapshot.counts.total} public repositories, and ${historySnapshot.total} official npm range downloads.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10263a"/><stop offset="1" stop-color="#07111d"/></linearGradient>
     <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#83d6a2"/><stop offset=".52" stop-color="#55d7df"/><stop offset="1" stop-color="#aa91ff"/></linearGradient>
@@ -283,12 +277,23 @@ const packageNames = [...new Set(registryPackages.map((pkg) => pkg.name))].sort(
 if (!packageNames.length) throw new Error(`The NPM registry returned no packages maintained by ${NPM_MAINTAINER}.`);
 
 const periodResponses = {};
+const periodOfficialUrls = [];
 for (const period of PERIODS) {
   periodResponses[period.key] = {};
   for (const name of packageNames) {
-    periodResponses[period.key][name] = await fetchJson(
-      `https://api.npmjs.org/downloads/point/${period.endpoint}/${encodeURIComponent(name)}`,
+    const officialUrl = `https://api.npmjs.org/downloads/range/${period.endpoint}/${encodeURIComponent(name)}`;
+    periodOfficialUrls.push(officialUrl);
+    periodResponses[period.key][name] = summarizeOfficialRange(
+      await fetchJson(officialUrl),
+      `official npm ${period.key} range for ${name}`,
     );
+  }
+  const sample = periodResponses[period.key][packageNames[0]];
+  if (!packageNames.every((name) => {
+    const range = periodResponses[period.key][name];
+    return range.start === sample.start && range.end === sample.end;
+  })) {
+    throw new Error(`Official npm ${period.key} ranges do not share the same coverage window.`);
   }
 }
 
@@ -302,16 +307,19 @@ const npmPackages = registryPackages.map((pkg) => ({
   license: pkg.license || null,
   publishedAt: pkg.date || null,
   links: packageLinks(pkg),
-  downloads: Object.fromEntries(PERIODS.map(({ key }) => [key, normalizedCount(periodResponses[key][pkg.name]?.downloads || 0, `${pkg.name} ${key}`)])),
+  downloads: Object.fromEntries(PERIODS.map(({ key }) => [key, periodResponses[key][pkg.name].total])),
+  series: Object.fromEntries(PERIODS.map(({ key }) => [key, periodResponses[key][pkg.name].downloads])),
 })).sort((left, right) => right.downloads.year - left.downloads.year || left.name.localeCompare(right.name));
 
 const npmSnapshot = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   generatedAt,
   maintainer: NPM_MAINTAINER,
   source: {
     registry: searchUrl,
-    downloads: "https://api.npmjs.org/downloads/point/{period}/{packages}",
+    authority: "Official npm download-count range API; sole authority for every published count.",
+    downloads: "https://api.npmjs.org/downloads/range/{period}/{package}",
+    officialUrls: periodOfficialUrls,
     semantics: "Successful package-tarball downloads, not unique people or verified installations.",
   },
   packageCount: npmPackages.length,
@@ -323,10 +331,20 @@ const npmSnapshot = {
   packages: npmPackages,
 };
 
-const latestDay = await fetchJson(`https://api.npmjs.org/downloads/point/last-day/${encodeURIComponent(packageNames[0])}`);
-if (!validDate(latestDay.end)) throw new Error("NPM did not return a valid latest available day.");
+const availabilityUrls = [];
+const latestAvailableDays = [];
+for (const name of packageNames) {
+  const availabilityUrl = `https://api.npmjs.org/downloads/range/last-day/${encodeURIComponent(name)}`;
+  availabilityUrls.push(availabilityUrl);
+  const availability = summarizeOfficialRange(
+    await fetchJson(availabilityUrl),
+    `official npm latest available range for ${name}`,
+  );
+  if (!validDate(availability.end)) throw new Error(`NPM did not return a valid latest available day for ${name}.`);
+  latestAvailableDays.push(availability.end);
+}
 const requestedUntil = yesterdayUtc();
-const availableUntil = earlierDate(requestedUntil, latestDay.end);
+const availableUntil = latestAvailableDays.reduce((earliest, date) => earlierDate(earliest, date), requestedUntil);
 if (availableUntil < HISTORY_FROM) throw new Error(`The latest NPM day predates the requested history start ${HISTORY_FROM}.`);
 const historyDates = calendarDates(HISTORY_FROM, availableUntil);
 const referenceUrl = `https://npm-stat.com/api/download-counts?author=${NPM_MAINTAINER}&from=${HISTORY_FROM}&until=${availableUntil}`;
@@ -335,7 +353,7 @@ let reference = null;
 try {
   reference = await fetchJson(referenceUrl, { timeoutMs: 8_000 }, 2);
 } catch (error) {
-  console.warn(`NPM reference reconciliation is unavailable; official telemetry will continue. ${error.message}`);
+  console.warn(`Optional npm-stat comparison is unavailable; official telemetry will continue unchanged. ${error.message}`);
 }
 const referenceAvailable = reference !== null;
 const officialUrls = [];
@@ -344,63 +362,72 @@ for (const [chunkStart, chunkEnd] of rangeChunks(HISTORY_FROM, availableUntil)) 
   for (const name of packageNames) {
     const officialUrl = `https://api.npmjs.org/downloads/range/${chunkStart}:${chunkEnd}/${encodeURIComponent(name)}`;
     officialUrls.push(officialUrl);
-    const chunk = await fetchJson(officialUrl);
-    const series = chunk.downloads;
-    if (!Array.isArray(series)) throw new Error(`Official NPM history is missing ${name} for ${chunkStart}:${chunkEnd}.`);
-    for (const point of series) {
-      if (!validDate(point.day)) throw new Error(`Official NPM history returned an invalid date for ${name}.`);
-      officialPoints.get(name).set(point.day, normalizedCount(point.downloads, `${name} ${point.day}`));
+    const chunk = summarizeOfficialRange(
+      await fetchJson(officialUrl),
+      `official npm history range for ${name} ${chunkStart}:${chunkEnd}`,
+    );
+    for (const point of chunk.downloads) {
+      officialPoints.get(name).set(point.day, point.downloads);
     }
   }
 }
 
-let referenceTotal = referenceAvailable ? 0 : null;
-let referenceMissingPointCount = referenceAvailable ? 0 : null;
-let correctedPointCount = referenceAvailable ? 0 : null;
 const historyPackages = packageNames.map((name) => {
   const officialMap = officialPoints.get(name);
-  const referencePoints = referenceAvailable ? reference[name] || {} : null;
   const downloads = historyDates.map((date) => {
     if (!officialMap.has(date)) throw new Error(`Official NPM history is missing ${name} on ${date}.`);
-    const officialCount = officialMap.get(date);
-    if (!referenceAvailable) {
-      return officialCount;
-    }
-    if (!Object.hasOwn(referencePoints, date)) {
-      referenceMissingPointCount += 1;
-    } else {
-      const referenceCount = normalizedCount(referencePoints[date], `npm-stat ${name} ${date}`);
-      referenceTotal += referenceCount;
-      if (referenceCount !== officialCount) correctedPointCount += 1;
-    }
-    return officialCount;
+    return officialMap.get(date);
   });
   return { name, total: downloads.reduce((sum, value) => sum + value, 0), downloads };
 });
 const overall = historyDates.map((_, index) => historyPackages.reduce((sum, pkg) => sum + pkg.downloads[index], 0));
 const historyTotal = overall.reduce((sum, value) => sum + value, 0);
+let referenceTotal = null;
+let referenceMissingPointCount = null;
+let correctedPointCount = null;
+let usableReference = referenceAvailable;
+if (usableReference) {
+  try {
+    const comparisons = historyPackages.map((pkg) => compareReferenceSeries({
+      officialDownloads: historyDates.map((day, index) => ({ day, downloads: pkg.downloads[index] })),
+      referencePoints: reference[pkg.name] || {},
+    }));
+    if (comparisons.some((comparison) => !comparison.referenceAvailable)) {
+      throw new Error("The optional npm-stat comparison contains invalid values.");
+    }
+    referenceTotal = comparisons.reduce((sum, comparison) => sum + comparison.npmStatReferenceTotal, 0);
+    referenceMissingPointCount = comparisons.reduce((sum, comparison) => sum + comparison.referenceMissingPointCount, 0);
+    correctedPointCount = comparisons.reduce((sum, comparison) => sum + comparison.correctedPointCount, 0);
+  } catch (error) {
+    usableReference = false;
+    console.warn(`NPM comparison data is invalid and will be ignored; official telemetry is unchanged. ${error.message}`);
+  }
+}
 const firstIndex = overall.findIndex((value) => value > 0);
 const peakValue = Math.max(...overall, 0);
 const peakIndex = peakValue ? overall.indexOf(peakValue) : -1;
 const referenceQuality = classifyReferenceQuality({
-  referenceAvailable,
+  referenceAvailable: usableReference,
   officialTotal: historyTotal,
   referenceTotal,
   correctedPointCount,
   referenceMissingPointCount,
 });
 const historySnapshot = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   generatedAt,
   maintainer: NPM_MAINTAINER,
   source: {
     referenceProvider: "npm-stat.com",
     referenceUrl,
     referenceView,
-    authority: "Official NPM download-count API",
+    referenceRole: "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
+    authority: "Official npm download-count range API; sole authority for every published daily value and total.",
+    authorityDocumentation: "https://github.com/npm/registry/blob/main/docs/download-counts.md",
+    availabilityUrls,
     officialUrls,
     semantics: "Successful package-tarball downloads, not unique people or verified installations.",
-    freshness: "The available-until date follows NPM's latest finalized rolling-window endpoint.",
+    freshness: "The available-until date follows npm's official range/last-day endpoint, capped at the completed UTC day.",
   },
   period: {
     requestedFrom: HISTORY_FROM,
@@ -415,10 +442,11 @@ const historySnapshot = {
   dataQuality: {
     officialTotal: historyTotal,
     npmStatReferenceTotal: referenceTotal,
-    correction: referenceQuality.correction,
+    officialMinusNpmStat: referenceQuality.officialMinusReference,
+    publishedTotalSource: "official npm range series",
     correctedPointCount,
     referenceMissingPointCount,
-    referenceAvailable,
+    referenceAvailable: usableReference,
     exactMatch: referenceQuality.exactMatch,
     status: referenceQuality.status,
   },
@@ -505,6 +533,7 @@ if (!readmePattern.test(readme)) throw new Error("README telemetry count markers
 const readmeSummary = `${readmeStart}
 <p align="center">
   <strong>${projects.published.length} published interfaces · ${projects.mapSnapshot.points} mapped ecosystem points · ${projects.mapSnapshot.relationships} relationships · ${repoSnapshot.counts.total} public repositories</strong><br>
+  <sub><strong>${fullNumber(historySnapshot.total)} official npm range downloads</strong> from ${longDate(historySnapshot.period.availableFrom)} through ${longDate(historySnapshot.period.availableUntil)} · npm-stat is an optional comparison only</sub><br>
   <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
 </p>
 ${readmeEnd}`;
@@ -532,6 +561,19 @@ const indexFallbacks = {
   "npm-week": fullNumber(npmSnapshot.totals.week),
   "npm-month": fullNumber(npmSnapshot.totals.month),
   "npm-year": fullNumber(npmSnapshot.totals.year),
+  "npm-chart-period": `${longDate(historySnapshot.period.availableFrom)}–${longDate(historySnapshot.period.availableUntil)} · official daily range series`,
+  "npm-first-day": historySnapshot.firstRecordedDay
+    ? `${longDate(historySnapshot.firstRecordedDay.date)} · ${fullNumber(historySnapshot.firstRecordedDay.downloads)}`
+    : "No recorded downloads",
+  "npm-peak-day": historySnapshot.peakDay
+    ? `${longDate(historySnapshot.peakDay.date)} · ${fullNumber(historySnapshot.peakDay.downloads)}`
+    : "No recorded downloads",
+  "npm-coverage": `${fullNumber(historySnapshot.dates.length)} official range days · ${fullNumber(historySnapshot.packageCount)} ${historySnapshot.packageCount === 1 ? "module" : "modules"}`,
+  "npm-status": historySnapshot.dataQuality.referenceAvailable
+    ? historySnapshot.dataQuality.exactMatch
+      ? "Official npm range series is authoritative; optional npm-stat comparison matches point for point."
+      : "Official npm range series is authoritative and published unchanged; optional npm-stat comparison differs."
+    : "Official npm range series is authoritative; optional npm-stat comparison is unavailable.",
 };
 for (const [id, value] of Object.entries(indexFallbacks)) {
   updatedIndex = replaceElementText(updatedIndex, id, value);
@@ -549,7 +591,7 @@ await Promise.all([
 
 const snapshotStats = await stat(SNAPSHOT_PATH);
 console.log(`Recorded ${repoSnapshot.counts.total} public repositories and ${npmSnapshot.packageCount} NPM module through ${historySnapshot.period.availableUntil}.`);
-console.log(referenceAvailable
-  ? `Official NPM total: ${fullNumber(historySnapshot.total)}; npm-stat reference: ${fullNumber(historySnapshot.dataQuality.npmStatReferenceTotal)}.`
-  : `Official NPM total: ${fullNumber(historySnapshot.total)}; npm-stat reference unavailable.`);
+console.log(usableReference
+  ? `Official NPM total: ${fullNumber(historySnapshot.total)}; optional npm-stat comparison: ${fullNumber(historySnapshot.dataQuality.npmStatReferenceTotal)}.`
+  : `Official NPM total: ${fullNumber(historySnapshot.total)}; optional npm-stat comparison unavailable.`);
 console.log(`Updated snapshots at ${snapshotStats.mtime.toISOString()}.`);

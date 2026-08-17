@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { classifyReferenceQuality } from "../scripts/telemetry-quality.mjs";
+import { classifyReferenceQuality, compareReferenceSeries, summarizeOfficialRange } from "../scripts/telemetry-quality.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (relativePath) => readFile(path.join(ROOT, relativePath), "utf8");
@@ -40,35 +40,69 @@ test("public code atlas accounts for every repository and labels each record", a
   assert.ok(snapshot.repositories.every((repo) => repo.license !== "NOASSERTION"));
 });
 
-test("rolling NPM totals are exact sums of the maintained package inventory", async () => {
+test("rolling NPM totals are exact sums of persisted official range series", async () => {
   const snapshot = await json("data/npm-stats.json");
   const names = snapshot.packages.map((pkg) => pkg.name);
 
+  assert.equal(snapshot.schemaVersion, 2);
   assert.equal(snapshot.maintainer, "thewizardnexus");
+  assert.match(snapshot.source.authority, /sole authority/i);
+  assert.match(snapshot.source.downloads, /api\.npmjs\.org\/downloads\/range/);
+  assert.ok(snapshot.source.officialUrls.every((url) => /^https:\/\/api\.npmjs\.org\/downloads\/range\//.test(url)));
   assert.equal(snapshot.packageCount, snapshot.packages.length);
   assert.equal(new Set(names).size, names.length);
   assert.ok(snapshot.packages.every((pkg) => pkg.maintainers.some((name) => name.toLowerCase() === snapshot.maintainer)));
   for (const period of ["week", "month", "year"]) {
+    for (const pkg of snapshot.packages) {
+      const validated = summarizeOfficialRange({
+        start: snapshot.periods[period].start,
+        end: snapshot.periods[period].end,
+        downloads: pkg.series[period],
+      }, `persisted ${pkg.name} ${period} range`);
+      assert.equal(pkg.downloads[period], pkg.series[period].reduce((sum, point) => sum + point.downloads, 0));
+      assert.equal(pkg.downloads[period], validated.total);
+      assert.equal(pkg.series[period][0].day, snapshot.periods[period].start);
+      assert.equal(pkg.series[period].at(-1).day, snapshot.periods[period].end);
+    }
     assert.equal(snapshot.totals[period], snapshot.packages.reduce((sum, pkg) => sum + pkg.downloads[period], 0));
     assert.match(snapshot.periods[period].start, /^\d{4}-\d{2}-\d{2}$/);
     assert.match(snapshot.periods[period].end, /^\d{4}-\d{2}-\d{2}$/);
   }
 });
 
-test("NPM history uses the latest finalized day and reconciles the reference series", async () => {
+test("NPM history publishes only the official range series and treats comparison data as optional", async () => {
   const history = await json("data/npm-history.json");
 
+  assert.equal(history.schemaVersion, 2);
+  assert.match(history.source.authority, /sole authority/i);
+  assert.match(history.source.referenceRole, /optional, non-authoritative/i);
+  assert.ok([...history.source.availabilityUrls, ...history.source.officialUrls]
+    .every((url) => /^https:\/\/api\.npmjs\.org\/downloads\/range\//.test(url)));
   assert.equal(history.packageCount, history.packages.length);
   assert.equal(history.dates.length, history.overall.length);
   assert.ok(history.packages.every((pkg) => pkg.downloads.length === history.dates.length));
+  assert.ok(history.packages.every((pkg) => pkg.total === pkg.downloads.reduce((sum, value) => sum + value, 0)));
+  assert.deepEqual(
+    history.overall,
+    history.dates.map((_, index) => history.packages.reduce((sum, pkg) => sum + pkg.downloads[index], 0)),
+  );
   assert.equal(history.total, history.overall.reduce((sum, value) => sum + value, 0));
   assert.equal(history.dataQuality.officialTotal, history.total);
-  assert.equal(history.dataQuality.referenceAvailable, true);
-  assert.equal(history.dataQuality.correction, history.total - history.dataQuality.npmStatReferenceTotal);
-  assert.equal(
-    history.dataQuality.exactMatch,
-    history.dataQuality.correctedPointCount === 0 && history.dataQuality.referenceMissingPointCount === 0,
-  );
+  assert.equal(history.dataQuality.publishedTotalSource, "official npm range series");
+  if (history.dataQuality.referenceAvailable) {
+    assert.equal(history.dataQuality.officialMinusNpmStat, history.total - history.dataQuality.npmStatReferenceTotal);
+    assert.equal(
+      history.dataQuality.exactMatch,
+      history.dataQuality.correctedPointCount === 0 && history.dataQuality.referenceMissingPointCount === 0,
+    );
+  } else {
+    assert.equal(history.dataQuality.npmStatReferenceTotal, null);
+    assert.equal(history.dataQuality.officialMinusNpmStat, null);
+    assert.equal(history.dataQuality.correctedPointCount, null);
+    assert.equal(history.dataQuality.referenceMissingPointCount, null);
+    assert.equal(history.dataQuality.exactMatch, false);
+    assert.match(history.dataQuality.status, /optional npm-stat comparison unavailable/i);
+  }
   assert.equal(history.period.availableFrom, history.dates[0]);
   assert.equal(history.period.availableUntil, history.dates.at(-1));
   assert.ok(history.period.availableUntil <= history.period.requestedUntil);
@@ -80,7 +114,41 @@ test("NPM history uses the latest finalized day and reconciles the reference ser
   }
 });
 
-test("reference quality never labels cancelling or missing discrepancies as an exact match", () => {
+test("official range validation rejects missing daily rows", () => {
+  assert.throws(() => summarizeOfficialRange({
+    start: "2026-08-11",
+    end: "2026-08-13",
+    downloads: [
+      { day: "2026-08-11", downloads: 5 },
+      { day: "2026-08-13", downloads: 3 },
+    ],
+  }), /missing or misorders the official day 2026-08-12/);
+});
+
+test("npm-stat zeros, omissions, differences, malformed values, and outages never change the official total", () => {
+  const officialDownloads = [
+    { day: "2026-08-11", downloads: 5 },
+    { day: "2026-08-12", downloads: 7 },
+    { day: "2026-08-13", downloads: 3 },
+  ];
+  const unchangedOfficial = structuredClone(officialDownloads);
+  const comparisons = [
+    compareReferenceSeries({ officialDownloads, referencePoints: { "2026-08-11": 0, "2026-08-12": 0, "2026-08-13": 0 } }),
+    compareReferenceSeries({ officialDownloads, referencePoints: { "2026-08-11": 5, "2026-08-13": 3 } }),
+    compareReferenceSeries({ officialDownloads, referencePoints: null }),
+    compareReferenceSeries({ officialDownloads, referencePoints: { "2026-08-11": 10, "2026-08-12": 10, "2026-08-13": 10 } }),
+    compareReferenceSeries({ officialDownloads, referencePoints: { "2026-08-11": "malformed" } }),
+  ];
+  assert.ok(comparisons.every((comparison) => comparison.officialTotal === 15));
+  assert.deepEqual(officialDownloads, unchangedOfficial);
+  assert.equal(comparisons[0].npmStatReferenceTotal, 0);
+  assert.equal(comparisons[1].referenceMissingPointCount, 1);
+  assert.equal(comparisons[2].npmStatReferenceTotal, null);
+  assert.equal(comparisons[2].officialMinusNpmStat, null);
+  assert.equal(comparisons[3].officialMinusNpmStat, -15);
+  assert.equal(comparisons[4].referenceAvailable, false);
+  assert.equal(comparisons[4].npmStatReferenceTotal, null);
+
   const cancelling = classifyReferenceQuality({
     referenceAvailable: true,
     officialTotal: 12,
@@ -103,21 +171,24 @@ test("reference quality never labels cancelling or missing discrepancies as an e
     referenceMissingPointCount: null,
   });
 
-  assert.equal(cancelling.correction, 0);
+  assert.equal(cancelling.officialMinusReference, 0);
   assert.equal(cancelling.exactMatch, false);
   assert.equal(missingZero.exactMatch, false);
   assert.equal(unavailable.exactMatch, false);
-  assert.equal(unavailable.correction, null);
+  assert.equal(unavailable.officialMinusReference, null);
 });
 
 test("README and static site expose the ecosystem atlas and compact NPM signal", async () => {
-  const [readme, html, script, css, svg] = await Promise.all([
+  const [readme, html, script, css, svg, history, generator] = await Promise.all([
     read("README.md"),
     read("index.html"),
     read("app.js"),
     read("styles.css"),
     read("assets/twin-signal.svg"),
+    json("data/npm-history.json"),
+    read("scripts/update-profile-data.mjs"),
   ]);
+  const officialTotal = history.total.toLocaleString("en-US");
 
   assert.match(readme, /assets\/twin-signal\.svg/);
   assert.match(readme, /thewizardnexus\.github\.io\/TheWizardNexus/);
@@ -130,6 +201,11 @@ test("README and static site expose the ecosystem atlas and compact NPM signal",
   assert.match(css, /prefers-reduced-motion/);
   assert.match(svg, /TWiN PUBLIC ECOSYSTEM/);
   assert.match(svg, /MAPPED POINTS/);
+  assert.match(readme, new RegExp(`${officialTotal} official npm range downloads`));
+  assert.match(svg, new RegExp(`${officialTotal} official-range downloads`));
+  assert.match(svg, new RegExp(`${history.total} official npm range downloads`));
+  assert.doesNotMatch(generator, /downloads\/point/);
+  assert.match(generator, /downloads\/range/);
 });
 
 test("no-script HTML telemetry agrees with the generated data snapshots", async () => {

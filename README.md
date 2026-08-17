@@ -21,11 +21,12 @@
 <!-- profile-telemetry-counts:start -->
 <p align="center">
   <strong>13 published interfaces · 78 mapped ecosystem points · 171 relationships · 5 public repositories</strong><br>
+  <sub><strong>132 official npm range downloads</strong> from January 1, 2026 through August 15, 2026 · npm-stat is an optional comparison only</sub><br>
   <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
 </p>
 <!-- profile-telemetry-counts:end -->
 
-The live atlas centers the systems, evidence, and relationships that make up TWiN. It accounts for every published project interface and every public repository, while labeling the boundary between a public site and public source. NPM appears as a compact, verified distribution signal—not as a proxy for people, outcomes, or mission impact.
+The live atlas centers the systems, evidence, and relationships that make up TWiN. It accounts for every published project interface and every public repository, while labeling the boundary between a public site and public source. NPM appears as a compact distribution signal—not as a proxy for people, outcomes, or mission impact. Every published NPM figure is summed from npm's official daily range API; npm-stat is optional comparison context and never changes the official record.
 
 ---
 
