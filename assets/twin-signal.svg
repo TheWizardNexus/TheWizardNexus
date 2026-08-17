@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="510" viewBox="0 0 980 510" role="img" aria-labelledby="title description">
+  <title id="title">The Wizard Nexus public ecosystem signal</title>
+  <desc id="description">13 live project interfaces, 78 mapped points, 171 relationships, 5 public repositories, and 132 recorded NPM downloads.</desc>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10263a"/><stop offset="1" stop-color="#07111d"/></linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#83d6a2"/><stop offset=".52" stop-color="#55d7df"/><stop offset="1" stop-color="#aa91ff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#55d7df" stop-opacity=".22"/><stop offset="1" stop-color="#55d7df" stop-opacity="0"/></radialGradient>
+  </defs>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #f5f8fb; }
+    .eyebrow { font: 800 12px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: 2px; fill: #55d7df; }
+    .heading { font-size: 38px; font-weight: 800; letter-spacing: -1.6px; }
+    .subhead { font-size: 15px; fill: #a8b7c7; }
+    .label { font: 800 10px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: 1.2px; fill: #71859a; }
+    .metric { font-size: 42px; font-weight: 820; letter-spacing: -2px; }
+    .detail { font-size: 11px; fill: #a8b7c7; }
+    .foot { font: 650 11px ui-monospace, SFMono-Regular, Consolas, monospace; fill: #71859a; }
+  </style>
+  <rect x="1" y="1" width="978" height="508" rx="26" fill="url(#surface)" stroke="#23415a"/>
+  <rect x="1" y="1" width="978" height="4" rx="2" fill="url(#signal)"/>
+  <circle cx="876" cy="112" r="92" fill="url(#glow)"/>
+  <circle cx="876" cy="112" r="48" fill="none" stroke="#55d7df" stroke-opacity=".32"/>
+  <circle cx="876" cy="112" r="25" fill="none" stroke="#e8c576" stroke-opacity=".4" stroke-dasharray="3 5"/>
+  <path d="M876 58V166M822 112H930" stroke="#b6d0e6" stroke-opacity=".14"/>
+  <path d="M876 76l6 29-6 7-6-7z" fill="#55d7df"/><path d="M876 148l-6-29 6-7 6 7z" fill="#e8c576"/>
+  <text x="48" y="56" class="eyebrow">TWiN PUBLIC ECOSYSTEM · VERIFIED PROFILE</text>
+  <text x="48" y="108" class="heading">See the signal. Keep the human.</text>
+  <text x="48" y="143" class="subhead">Governed AI, local-first infrastructure, behavioral-health intelligence, and accountable human judgment.</text>
+  <g transform="translate(48 202)">
+      <rect width="206" height="154" rx="18" fill="#0a1a2a" stroke="#23415a"/>
+      <text x="18" y="34" class="label">LIVE INTERFACES</text>
+      <text x="18" y="88" class="metric">13</text>
+      <text x="18" y="119" class="detail">published sites and guides</text>
+    </g><g transform="translate(274 202)">
+      <rect width="206" height="154" rx="18" fill="#0a1a2a" stroke="#23415a"/>
+      <text x="18" y="34" class="label">MAPPED POINTS</text>
+      <text x="18" y="88" class="metric">78</text>
+      <text x="18" y="119" class="detail">171 recorded relationships</text>
+    </g><g transform="translate(500 202)">
+      <rect width="206" height="154" rx="18" fill="#0a1a2a" stroke="#23415a"/>
+      <text x="18" y="34" class="label">PUBLIC REPOSITORIES</text>
+      <text x="18" y="88" class="metric">5</text>
+      <text x="18" y="119" class="detail">2 stars received</text>
+    </g><g transform="translate(726 202)">
+      <rect width="206" height="154" rx="18" fill="#0a1a2a" stroke="#23415a"/>
+      <text x="18" y="34" class="label">NPM MODULES</text>
+      <text x="18" y="88" class="metric">1</text>
+      <text x="18" y="119" class="detail">132 recorded downloads</text>
+    </g>
+  <path d="M48 406H932" stroke="#23415a"/>
+  <text x="48" y="441" class="eyebrow">OPERATING PRACTICE</text>
+  <text x="48" y="470" class="subhead">OPTIMIZE  →  DETECT  →  PREVENT  →  INTERVENE</text>
+  <text x="932" y="470" text-anchor="end" class="foot">refreshed Aug 17, 2026 UTC</text>
+</svg>

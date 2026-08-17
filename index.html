@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07111d">
+    <meta name="description" content="Navigate The Wizard Nexus: human-centered AI, behavioral-health intelligence, live project sites, public repositories, and verified public telemetry.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Wizard Nexus // Human-centered systems">
+    <meta property="og:description" content="A live atlas of the TWiN ecosystem: governed AI, local-first data, behavioral-health intelligence, and tools designed for meaningful human intervention.">
+    <meta property="og:url" content="https://thewizardnexus.github.io/TheWizardNexus/">
+    <meta property="og:image" content="https://thewizardnexus.github.io/TheWizardNexus/assets/twin-ecosystem-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1731">
+    <meta property="og:image:height" content="909">
+    <meta property="og:image:alt" content="The Wizard Nexus public ecosystem: human-centered systems, mapped relationships, public interfaces, and accountable human judgment.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Wizard Nexus // Human-centered systems">
+    <meta name="twitter:description" content="Navigate the systems, tools, evidence, and public code behind the TWiN ecosystem.">
+    <meta name="twitter:image" content="https://thewizardnexus.github.io/TheWizardNexus/assets/twin-ecosystem-og.png">
+    <meta name="twitter:image:alt" content="The Wizard Nexus public ecosystem: human-centered systems, mapped relationships, public interfaces, and accountable human judgment.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://thewizardnexus.github.io/TheWizardNexus/">
+    <title>The Wizard Nexus // Human-centered systems</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the ecosystem</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="The Wizard Nexus home">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span><b>The Wizard Nexus</b><small>Human-centered systems</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <nav id="primary-navigation" aria-label="Primary navigation">
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#repositories">Public code</a>
+        <a href="#npm">NPM signal</a>
+        <a href="#mission">Mission</a>
+        <a class="nav-cta" href="https://www.thewizardnexus.com/#contact">Work with us ↗</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Behavioral health intelligence · human accountability</p>
+          <h1 id="hero-title">See the signal.<br><span>Keep the human.</span></h1>
+          <p class="hero-intro">The Wizard Nexus builds governed AI, local-first infrastructure, and behavioral-health-informed tools that help people understand complexity and act before a crisis becomes inevitable.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#ecosystem">Navigate the ecosystem</a>
+            <a class="button button-quiet" href="https://www.thewizardnexus.com/">Visit TheWizardNexus.com ↗</a>
+          </div>
+          <p class="hero-proof">Woman-led · Built entirely by service-connected disabled Veterans · Powered by PreCrisis AI</p>
+        </div>
+
+        <div class="nexus-map" aria-label="A visual map connecting behavioral health, governed AI, local-first data, and human judgment">
+          <div class="map-orbit orbit-a" aria-hidden="true"></div>
+          <div class="map-orbit orbit-b" aria-hidden="true"></div>
+          <div class="map-core"><strong>TWiN</strong><span>human judgment</span></div>
+          <p class="map-node node-one"><b>PreCrisis</b><span>early signal</span></p>
+          <p class="map-node node-two"><b>ARCANE</b><span>governed AI</span></p>
+          <p class="map-node node-three"><b>DBOPFS</b><span>local-first data</span></p>
+          <p class="map-node node-four"><b>Compass</b><span>moral direction</span></p>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="TWiN public ecosystem summary">
+        <article><span>Published interfaces</span><strong id="project-total">13</strong><small>live project sites and guides</small></article>
+        <article><span>Mapped points</span><strong id="mapped-points">78</strong><small>systems, people, programs, and hosts</small></article>
+        <article><span>Relationships</span><strong id="mapped-relationships">171</strong><small>bearings across eight ecosystem rings</small></article>
+        <article class="signal-strip-accent"><span>Public code</span><strong id="repo-total-hero">5</strong><small>discoverable repositories</small></article>
+      </section>
+
+      <p class="freshness" id="freshness"><span aria-hidden="true"></span> Loading the latest verified public snapshot…</p>
+
+      <section class="section-shell ecosystem-section" id="ecosystem" aria-labelledby="ecosystem-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The public constellation</p>
+            <h2 id="ecosystem-title">One mission.<br>Many working systems.</h2>
+          </div>
+          <div class="section-side">
+            <p>Every published TWiN interface is gathered here, including public sites backed by private repositories. A public experience does not imply public source.</p>
+            <label class="search-field">
+              <span>Find a project</span>
+              <input id="project-search" type="search" placeholder="Try data, safety, evidence…" autocomplete="off">
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-pills" id="project-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" data-project-filter="all" aria-pressed="true">All systems</button>
+          <button type="button" data-project-filter="foundation" aria-pressed="false">Foundations</button>
+          <button type="button" data-project-filter="platform" aria-pressed="false">Platforms</button>
+          <button type="button" data-project-filter="safety" aria-pressed="false">Safety &amp; judgment</button>
+        </div>
+        <p class="result-count" id="project-result-count" aria-live="polite" aria-atomic="true">13 published interfaces in the public constellation.</p>
+        <div class="project-grid" id="project-grid"></div>
+        <button class="load-more" id="project-load-more" type="button" hidden>Reveal the complete constellation</button>
+
+        <aside class="launch-queue" aria-labelledby="launch-queue-title">
+          <div>
+            <p class="eyebrow">Publishing next</p>
+            <h3 id="launch-queue-title">The next signals are already forming.</h3>
+          </div>
+          <div class="launch-list" id="launch-list"></div>
+        </aside>
+      </section>
+
+      <section class="method-band" id="mission" aria-labelledby="method-title">
+        <div class="method-intro">
+          <p class="eyebrow">The operating practice</p>
+          <h2 id="method-title">Intervene earlier.<br>Decide more clearly.</h2>
+          <p>PreCrisis AI is designed to surface signs of trouble early enough for meaningful human action. The technology informs judgment; people remain accountable for what happens next.</p>
+        </div>
+        <ol class="method-flow">
+          <li><b>01</b><strong>Optimize</strong><span>Build readiness, resilience, and better operating conditions.</span></li>
+          <li><b>02</b><strong>Detect</strong><span>Notice meaningful changes without reducing a person to a score.</span></li>
+          <li><b>03</b><strong>Prevent</strong><span>Turn early signals into proportionate, humane preparation.</span></li>
+          <li><b>04</b><strong>Intervene</strong><span>Support timely action by an informed, accountable human.</span></li>
+        </ol>
+      </section>
+
+      <section class="section-shell repo-section" id="repositories" aria-labelledby="repository-title">
+        <div class="section-heading repo-heading">
+          <div>
+            <p class="eyebrow">Public code atlas</p>
+            <h2 id="repository-title">Inspect what is public.</h2>
+          </div>
+          <p>The atlas accounts for every public repository owned by The Wizard Nexus. Project sites backed by private code stay in the ecosystem directory without being mislabeled as open source.</p>
+        </div>
+
+        <div class="repo-stats" role="group" aria-label="Public GitHub repository summary">
+          <p><strong id="repo-total">5</strong><span>public repositories</span></p>
+          <p><strong id="repo-original">5</strong><span>original works</span></p>
+          <p><strong id="repo-stars">2</strong><span>stars earned</span></p>
+          <p><strong id="repo-updated">Aug 17</strong><span>most recent update</span></p>
+        </div>
+
+        <div class="repo-toolbar">
+          <label class="search-field repo-search">
+            <span>Search public code</span>
+            <input id="repo-search" type="search" placeholder="Search names, descriptions, topics…" autocomplete="off">
+          </label>
+          <label class="select-field">
+            <span>Language</span>
+            <select id="repo-language"><option value="all">All languages</option></select>
+          </label>
+          <label class="select-field">
+            <span>Sort</span>
+            <select id="repo-sort">
+              <option value="updated">Recently updated</option>
+              <option value="stars">Most starred</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-pills" id="repo-filters" role="group" aria-label="Filter repository type">
+          <button type="button" data-repo-kind="all" aria-pressed="true">Everything</button>
+          <button type="button" data-repo-kind="original" aria-pressed="false">Original work</button>
+          <button type="button" data-repo-kind="fork" aria-pressed="false">Forks</button>
+          <button type="button" data-repo-kind="archived" aria-pressed="false">Archived</button>
+        </div>
+        <p class="result-count" id="repo-result-count" aria-live="polite" aria-atomic="true">5 public repositories in the atlas.</p>
+        <div class="repo-grid" id="repo-grid"></div>
+      </section>
+
+      <section class="npm-section" id="npm" aria-labelledby="npm-title">
+        <div class="npm-copy">
+          <p class="eyebrow">Public package distribution</p>
+          <h2 id="npm-title">A small signal.<br><span>Now in motion.</span></h2>
+          <p>NPM is one emerging channel in a much larger ecosystem. This view records it precisely without letting download counts stand in for people, outcomes, or mission impact.</p>
+          <a class="text-link" href="https://www.npmjs.com/~thewizardnexus">View the TWiN NPM profile ↗</a>
+        </div>
+
+        <article class="npm-panel" aria-labelledby="npm-chart-title">
+          <header class="npm-panel-header">
+            <div>
+              <p class="eyebrow" id="npm-chart-kicker">Recorded history</p>
+              <h3 id="npm-chart-title">All TWiN modules</h3>
+              <p id="npm-chart-period">Loading the verified NPM series…</p>
+            </div>
+            <p class="npm-total"><span>Recorded downloads</span><strong id="npm-history-total">132</strong></p>
+          </header>
+
+          <div class="npm-metrics" role="group" aria-label="Rolling NPM downloads">
+            <p><span>Last week</span><strong id="npm-week">132</strong></p>
+            <p><span>Last month</span><strong id="npm-month">132</strong></p>
+            <p><span>Last year</span><strong id="npm-year">132</strong></p>
+          </div>
+
+          <div class="chart-frame" id="chart-frame">
+            <canvas id="npm-chart" role="img" aria-label="Loading the TWiN NPM download history. A complete daily table follows the chart."></canvas>
+            <output class="chart-tooltip" id="chart-tooltip" hidden></output>
+          </div>
+
+          <dl class="chart-stats">
+            <div><dt>First recorded day</dt><dd id="npm-first-day">—</dd></div>
+            <div><dt>Peak day</dt><dd id="npm-peak-day">—</dd></div>
+            <div><dt>Coverage</dt><dd id="npm-coverage">—</dd></div>
+          </dl>
+          <details class="npm-table-details">
+            <summary id="npm-table-summary">Browse the complete daily download record</summary>
+            <div class="npm-table-scroll" role="region" aria-labelledby="npm-table-summary" tabindex="0">
+              <table class="npm-data-table">
+                <caption id="npm-daily-caption">Complete daily NPM download record</caption>
+                <thead><tr><th scope="col">Date</th><th scope="col">Downloads</th></tr></thead>
+                <tbody id="npm-daily-body"><tr><td colspan="2">Loading daily values…</td></tr></tbody>
+              </table>
+            </div>
+          </details>
+          <div class="package-list" id="package-list"></div>
+          <p class="data-status" id="npm-status" role="status" aria-live="polite">Reconciling npm-stat with the official NPM record…</p>
+        </article>
+      </section>
+
+      <section class="evidence-section" aria-labelledby="evidence-title">
+        <div>
+          <p class="eyebrow">Evidence before theater</p>
+          <h2 id="evidence-title">Public claims.<br>Explicit boundaries.</h2>
+        </div>
+        <div class="evidence-notes">
+          <article><b>01</b><h3>Sites are not source</h3><p>A public interface can be backed by public, source-available, or private code. Each project is labeled accordingly.</p></article>
+          <article><b>02</b><h3>Downloads are not people</h3><p>NPM counts successful package-tarball downloads. Automation, mirrors, scanners, and repeat downloads may contribute.</p></article>
+          <article><b>03</b><h3>AI supports judgment</h3><p>TWiN systems are designed to inform accountable human decisions, not erase human discretion or responsibility.</p></article>
+        </div>
+        <p class="source-links">Sources: <a href="https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user">GitHub repositories API</a> · <a href="https://github.com/npm/registry/blob/main/docs/download-counts.md">official NPM download API</a> · <a href="https://www.npm-stat.com/">npm-stat reference series</a></p>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <div>
+          <p class="eyebrow">Build with The Wizard Nexus</p>
+          <h2 id="closing-title">Complex systems.<br>Humane outcomes.</h2>
+        </div>
+        <div>
+          <p>We work with clinicians, technologists, public institutions, military communities, schools, researchers, and mission-driven organizations building for high-trust environments.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://www.thewizardnexus.com/services">Explore services ↗</a>
+            <a class="button button-quiet" href="https://www.thewizardnexus.com/#contact">Start a conversation ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i></span><span><b>The Wizard Nexus</b><small>Behavioral health intelligence in service of human connection.</small></span></a>
+      <p><a href="https://www.thewizardnexus.com/">Website ↗</a> <a href="https://github.com/TheWizardNexus">GitHub ↗</a> <a href="https://www.linkedin.com/company/the-wizard-nexus/">LinkedIn ↗</a></p>
+    </footer>
+  </body>
+</html>

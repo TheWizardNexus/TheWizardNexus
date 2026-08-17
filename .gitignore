@@ -1,0 +1,3 @@
+dist/
+*.tgz
+.codex-*.lock.json

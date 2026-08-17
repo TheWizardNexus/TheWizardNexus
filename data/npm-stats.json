@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-17T18:41:28.913Z",
+  "maintainer": "thewizardnexus",
+  "source": {
+    "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
+    "downloads": "https://api.npmjs.org/downloads/point/{period}/{packages}",
+    "semantics": "Successful package-tarball downloads, not unique people or verified installations."
+  },
+  "packageCount": 1,
+  "periods": {
+    "week": {
+      "label": "Weekly",
+      "start": "2026-08-09",
+      "end": "2026-08-15"
+    },
+    "month": {
+      "label": "Monthly",
+      "start": "2026-07-17",
+      "end": "2026-08-15"
+    },
+    "year": {
+      "label": "Yearly",
+      "start": "2025-08-16",
+      "end": "2026-08-15"
+    }
+  },
+  "totals": {
+    "week": 132,
+    "month": 132,
+    "year": 132
+  },
+  "packages": [
+    {
+      "name": "dbopfs",
+      "version": "1.0.0",
+      "description": "A browser-native database that maps tables and records to the Origin Private File System.",
+      "keywords": [
+        "opfs",
+        "database",
+        "browser",
+        "filesystem",
+        "storage",
+        "arcane"
+      ],
+      "publisher": "thewizardnexus",
+      "maintainers": [
+        "thewizardnexus"
+      ],
+      "license": "PolyForm-Noncommercial-1.0.0",
+      "publishedAt": "2026-08-11T21:10:52.905Z",
+      "links": {
+        "npm": "https://www.npmjs.com/package/dbopfs",
+        "repository": "https://github.com/TheWizardNexus/DBOPFS",
+        "homepage": "https://thewizardnexus.github.io/DBOPFS/"
+      },
+      "downloads": {
+        "week": 132,
+        "month": 132,
+        "year": 132
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-08-17T18:41:28.913Z",
+  "source": {
+    "profile": "https://github.com/TheWizardNexus/TheWizardNexus",
+    "note": "Curated from the public TWiN profile. Public sites may be backed by public, source-available, or private repositories."
+  },
+  "mapSnapshot": {
+    "source": "https://github.com/TheWizardNexus/Astrolabe",
+    "dataUrl": "https://raw.githubusercontent.com/TheWizardNexus/Astrolabe/main/index.html",
+    "points": 78,
+    "relationships": 171,
+    "rings": 8
+  },
+  "published": [
+    {
+      "slug": "arcane-os",
+      "name": "ARCANE OS",
+      "category": "Operating environment",
+      "description": "An AI-native operating environment for governed, accountable human–AI collaboration in high-trust and regulated settings.",
+      "url": "https://thewizardnexus.github.io/ARCANE-OS/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/ARCANE-OS/apps/docs/assets/arcane-docs-social.png",
+      "sourceStatus": "Public documentation",
+      "featured": true,
+      "accent": "violet"
+    },
+    {
+      "slug": "arcane-os-sdk",
+      "name": "Arcane OS SDK",
+      "category": "Developer platform",
+      "description": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
+      "url": "https://thewizardnexus.github.io/arcane-os-sdk/",
+      "repositoryUrl": "https://github.com/TheWizardNexus/arcane-os-sdk",
+      "image": "https://thewizardnexus.github.io/arcane-os-sdk/assets/arcane-os-sdk-readme-header.png",
+      "sourceStatus": "Public repository",
+      "featured": true,
+      "accent": "blue"
+    },
+    {
+      "slug": "ax",
+      "name": "Arcane Exchange",
+      "category": "Application exchange",
+      "description": "A wizard-space bazaar for Arcane applications, AI tools, public catalogs, and private portals.",
+      "url": "https://thewizardnexus.github.io/AX/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/AX/public/og.png",
+      "sourceStatus": "Public site",
+      "featured": false,
+      "accent": "gold"
+    },
+    {
+      "slug": "astrolabe",
+      "name": "Astrolabe",
+      "category": "Ecosystem map",
+      "description": "An interactive map that makes the TWiN ecosystem understandable across foundations, platforms, products, programs, audiences, funding, and native hosts.",
+      "url": "https://thewizardnexus.github.io/Astrolabe/",
+      "repositoryUrl": "https://github.com/TheWizardNexus/Astrolabe",
+      "image": "https://thewizardnexus.github.io/Astrolabe/assets/astrolabe-readme-header.png",
+      "sourceStatus": "Public repository",
+      "featured": true,
+      "accent": "cyan"
+    },
+    {
+      "slug": "dbopfs",
+      "name": "DBOPFS",
+      "category": "Local-first data",
+      "description": "A browser-native database built on the Origin Private File System: tables become directories, records become files, and data stays local unless exported.",
+      "url": "https://thewizardnexus.github.io/DBOPFS/",
+      "repositoryUrl": "https://github.com/TheWizardNexus/DBOPFS",
+      "image": "https://thewizardnexus.github.io/DBOPFS/assets/og.png",
+      "sourceStatus": "Publicly source-available",
+      "featured": true,
+      "accent": "green"
+    },
+    {
+      "slug": "dbopfs-studio",
+      "name": "DBOPFS Studio",
+      "category": "Data workspace",
+      "description": "A Chromium workspace for exploring, editing, previewing, printing, and managing DBOPFS application data stored in OPFS.",
+      "url": "https://thewizardnexus.github.io/DBOPFS-Studio/",
+      "repositoryUrl": "https://github.com/TheWizardNexus/DBOPFS-Studio",
+      "image": "https://raw.githubusercontent.com/TheWizardNexus/DBOPFS-Studio/main/assets/dbopfs-studio-readme-header.png",
+      "sourceStatus": "Public repository",
+      "featured": false,
+      "accent": "green"
+    },
+    {
+      "slug": "spellwire",
+      "name": "SpellWire",
+      "category": "Auditable communications",
+      "description": "A private, invite-only communications ledger for human-and-AI teams to exchange context, evidence, requests, and decisions.",
+      "url": "https://thewizardnexus.github.io/SpellWire/",
+      "repositoryUrl": null,
+      "image": "assets/spellwire-readme-header.png",
+      "sourceStatus": "Public guide",
+      "featured": true,
+      "accent": "blue"
+    },
+    {
+      "slug": "toshokann",
+      "name": "Toshokann",
+      "category": "Knowledge infrastructure",
+      "description": "A neutral foundation for organizing, retaining, finding, and sharing institutional knowledge as a library, archive, repository, or information-sharing home.",
+      "url": "https://thewizardnexus.github.io/Toshokann/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/Toshokann/assets/toshokann-knowledge-hall.png",
+      "sourceStatus": "Public site",
+      "featured": false,
+      "accent": "gold"
+    },
+    {
+      "slug": "twin-compass",
+      "name": "TWiN Compass",
+      "category": "Responsible AI",
+      "description": "A moral, ethical, culturally aware, behavioral-health-informed layer that helps purpose-built models reason and communicate more safely.",
+      "url": "https://thewizardnexus.github.io/TWiN-Compass/",
+      "repositoryUrl": null,
+      "image": "assets/twin-compass-readme-header.png",
+      "sourceStatus": "Public guide",
+      "featured": true,
+      "accent": "violet"
+    },
+    {
+      "slug": "kempo",
+      "name": "KEMPO",
+      "category": "AI evaluation",
+      "description": "A human-scored, 100-prompt evaluation of AI judgment across behavioral safety, ethics, cyber, crisis, and public-safety categories.",
+      "url": "https://thewizardnexus.github.io/KEMPO/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/KEMPO/public/og.png",
+      "sourceStatus": "Public site",
+      "featured": true,
+      "accent": "red"
+    },
+    {
+      "slug": "sentinel",
+      "name": "Sentinel",
+      "category": "Investigative intelligence",
+      "description": "Provenance-first investigative intelligence that turns complex records into source-cited, human-reviewed leads and actionable reports.",
+      "url": "https://thewizardnexus.github.io/Sentinel/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/Sentinel/public/og.png",
+      "sourceStatus": "Public site",
+      "featured": false,
+      "accent": "cyan"
+    },
+    {
+      "slug": "scamurai",
+      "name": "Scamurai",
+      "category": "Human defense",
+      "description": "A human-centered scam and abuse defense suite built around evidence, explanation, consent, and agency.",
+      "url": "https://thewizardnexus.github.io/Scamurai/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/Scamurai/public/og.png",
+      "sourceStatus": "Public site",
+      "featured": false,
+      "accent": "red"
+    },
+    {
+      "slug": "redress",
+      "name": "Redress",
+      "category": "Legal-practice workbench",
+      "description": "A source-grounded workbench for organizing records, tracing material claims to evidence, and preparing analysis, drafts, research, and hearings for human review.",
+      "url": "https://thewizardnexus.github.io/Redress/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/Redress/public/og.png",
+      "sourceStatus": "Public site",
+      "featured": false,
+      "accent": "gold"
+    }
+  ],
+  "publishingNext": [
+    {
+      "name": "PreCrisis",
+      "description": "Early-signal behavioral health technology for meaningful human intervention."
+    },
+    {
+      "name": "SDE",
+      "description": "A forthcoming TWiN project with GitHub Pages configured."
+    },
+    {
+      "name": "Warrior Spirit Companion",
+      "description": "A forthcoming TWiN project with GitHub Pages configured."
+    }
+  ]
+}

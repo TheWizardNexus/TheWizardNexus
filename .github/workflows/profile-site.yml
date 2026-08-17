@@ -1,0 +1,75 @@
+name: Refresh public signal and deploy profile site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "31 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: twin-profile-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    permissions:
+      contents: write
+      pages: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the profile
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+
+      - name: Refresh verified public telemetry
+        env:
+          PROFILE_GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            node scripts/update-profile-data.mjs --max-age-hours=1
+          else
+            node scripts/update-profile-data.mjs --force
+          fi
+
+      - name: Verify data and site contracts
+        run: node --test tests/profile-site.test.mjs
+
+      - name: Record a refreshed snapshot when needed
+        run: |
+          if [[ -n "$(git status --porcelain -- README.md index.html data/projects.json data/npm-stats.json data/npm-history.json data/repos.json assets/twin-signal.svg)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -- README.md index.html data/projects.json data/npm-stats.json data/npm-history.json data/repos.json assets/twin-signal.svg
+            git commit -m "[Roshi's Codex PRIME] Refresh TWiN public signal"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
+      - name: Upload the static profile site
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: .
+
+  deploy:
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: prepare
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5

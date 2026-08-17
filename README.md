@@ -12,6 +12,21 @@
   <a href="https://lifeline.precrisis.analyticsgateway.com/nelson/chat.html"><img alt="PreCrisis AI" src="https://img.shields.io/badge/Explore-PreCrisis_AI-00897B?style=for-the-badge"></a>
 </p>
 
+<p align="center">
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/">
+    <img src="assets/twin-signal.svg" width="100%" alt="The Wizard Nexus public ecosystem signal showing published interfaces, mapped ecosystem points, relationships, public repositories, and the emerging NPM footprint">
+  </a>
+</p>
+
+<!-- profile-telemetry-counts:start -->
+<p align="center">
+  <strong>13 published interfaces · 78 mapped ecosystem points · 171 relationships · 5 public repositories</strong><br>
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
+</p>
+<!-- profile-telemetry-counts:end -->
+
+The live atlas centers the systems, evidence, and relationships that make up TWiN. It accounts for every published project interface and every public repository, while labeling the boundary between a public site and public source. NPM appears as a compact, verified distribution signal—not as a proxy for people, outcomes, or mission impact.
+
 ---
 
 ## Behavioral Health. Evolved.
