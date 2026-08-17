@@ -38,7 +38,12 @@ jobs:
           fi
 
       - name: Verify data and site contracts
-        run: node --test tests/profile-site.test.mjs
+        run: |
+          node --check app.js
+          node --check scripts/telemetry-quality.mjs
+          node --check scripts/update-profile-data.mjs
+          node --test tests/profile-site.test.mjs
+          git diff --check
 
       - name: Record a refreshed snapshot when needed
         run: |

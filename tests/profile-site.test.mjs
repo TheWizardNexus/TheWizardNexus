@@ -14,6 +14,7 @@ test("curated ecosystem accounts for every published interface without confusing
   const projects = await json("data/projects.json");
   const slugs = projects.published.map((project) => project.slug);
   const urls = projects.published.map((project) => project.url);
+  const stages = new Map(projects.published.map((project) => [project.slug, project.stage]));
 
   assert.equal(projects.published.length, 13);
   assert.equal(projects.publishingNext.length, 3);
@@ -21,6 +22,12 @@ test("curated ecosystem accounts for every published interface without confusing
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(projects.published.every((project) => project.url.startsWith("https://")));
   assert.ok(projects.published.every((project) => project.sourceStatus.trim().length > 0));
+  assert.ok(projects.published.every((project) => project.stage.trim().length > 0));
+  assert.equal(stages.get("arcane-os"), "Development");
+  assert.equal(stages.get("dbopfs"), "Released 1.0.0");
+  assert.equal(stages.get("twin-compass"), "Released 1.0.0");
+  assert.equal(stages.get("scamurai"), "Pre-release");
+  assert.equal(stages.get("redress"), "Inside ARCANE");
   assert.ok(projects.mapSnapshot.points >= 78);
   assert.ok(projects.mapSnapshot.relationships >= 171);
   assert.equal(projects.mapSnapshot.rings, 8);
@@ -193,9 +200,17 @@ test("README and static site expose the ecosystem atlas and compact NPM signal",
   assert.match(readme, /assets\/twin-signal\.svg/);
   assert.match(readme, /thewizardnexus\.github\.io\/TheWizardNexus/);
   assert.match(html, /id="project-grid"/);
+  assert.match(html, /id="team"/);
   assert.match(html, /id="repo-grid"/);
   assert.match(html, /id="npm-chart"/);
+  assert.match(html, /Johanna “JZ” Zollmann, LCSW/);
+  assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/turtlesallthewaydown\/"/);
+  assert.match(html, /Stage before spectacle/);
+  assert.match(html, /The complete directory remains available without scripts/);
+  assert.match(html, /Public code remains available without scripts/);
   assert.match(script, /data\/projects\.json/);
+  assert.match(script, /stage-badge/);
+  assert.match(script, /aria-label="Open \$\{escapeHtml\(project\.name\)\} — \$\{escapeHtml\(project\.stage\)\}"/);
   assert.match(script, /data\/repos\.json/);
   assert.match(script, /data\/npm-history\.json/);
   assert.match(css, /prefers-reduced-motion/);
@@ -206,6 +221,28 @@ test("README and static site expose the ecosystem atlas and compact NPM signal",
   assert.match(svg, new RegExp(`${history.total} official npm range downloads`));
   assert.doesNotMatch(generator, /downloads\/point/);
   assert.match(generator, /downloads\/range/);
+});
+
+test("Pages metadata and workflow agree on the canonical TWiN site", async () => {
+  const [html, robots, sitemap, workflow] = await Promise.all([
+    read("index.html"),
+    read("robots.txt"),
+    read("sitemap.xml"),
+    read(".github/workflows/profile-site.yml"),
+  ]);
+  const canonical = "https://thewizardnexus.github.io/TheWizardNexus/";
+
+  assert.match(html, new RegExp(`<link rel="canonical" href="${canonical}"`));
+  assert.match(html, new RegExp(`<meta property="og:url" content="${canonical}"`));
+  assert.match(robots, new RegExp(`${canonical}sitemap\\.xml`));
+  assert.match(sitemap, new RegExp(`<loc>${canonical}</loc>`));
+  assert.match(workflow, /branches: \[main\]/);
+  assert.match(workflow, /node --check app\.js/);
+  assert.match(workflow, /node --test tests\/profile-site\.test\.mjs/);
+  assert.match(workflow, /actions\/configure-pages@/);
+  assert.match(workflow, /actions\/upload-pages-artifact@/);
+  assert.match(workflow, /actions\/deploy-pages@/);
+  assert.match(workflow, /path: \./);
 });
 
 test("no-script HTML telemetry agrees with the generated data snapshots", async () => {

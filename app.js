@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 const numberFormatter = new Intl.NumberFormat("en-US");
 const compactFormatter = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
 const shortDateFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
@@ -115,7 +117,7 @@ function renderProjects() {
   if (!state.projects) return;
   const query = state.projectQuery.trim().toLowerCase();
   const filtered = state.projects.published.filter((project) => {
-    const haystack = [project.name, project.category, project.description, project.sourceStatus].join(" ").toLowerCase();
+    const haystack = [project.name, project.category, project.stage, project.description, project.sourceStatus].join(" ").toLowerCase();
     return projectMatchesFilter(project) && (!query || haystack.includes(query));
   });
   const shouldLimit = state.projectFilter === "all" && !query && !state.projectsExpanded;
@@ -135,9 +137,10 @@ function renderProjects() {
       ? `<a class="secondary" href="${escapeHtml(project.repositoryUrl)}">Inspect repository ↗</a>`
       : "";
     return `<article class="project-card" data-accent="${escapeHtml(project.accent)}">
-      <a class="project-media" href="${escapeHtml(project.url)}" aria-label="Open ${escapeHtml(project.name)}">
+      <a class="project-media" href="${escapeHtml(project.url)}" aria-label="Open ${escapeHtml(project.name)} — ${escapeHtml(project.stage)}">
         <img src="${escapeHtml(project.image)}" alt="" loading="lazy">
         <span class="image-fallback">${escapeHtml(project.name)}</span>
+        <span class="stage-badge">${escapeHtml(project.stage)}</span>
       </a>
       <div class="project-body">
         <div class="card-kicker"><span>${escapeHtml(project.category)}</span><span>${escapeHtml(project.sourceStatus)}</span></div>

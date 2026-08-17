@@ -26,7 +26,7 @@
 </p>
 <!-- profile-telemetry-counts:end -->
 
-The live atlas centers the systems, evidence, and relationships that make up TWiN. It accounts for every published project interface and every public repository, while labeling the boundary between a public site and public source. NPM appears as a compact distribution signal—not as a proxy for people, outcomes, or mission impact. Every published NPM figure is summed from npm's official daily range API; npm-stat is optional comparison context and never changes the official record.
+The live atlas centers the people, systems, evidence, and relationships that make up TWiN. It accounts for every published project interface and public repository while labeling both source boundaries and maturity: released, development, pre-release, public foundation, private system, and forthcoming are not interchangeable claims. NPM appears as a compact distribution signal—not as a proxy for people, outcomes, or mission impact. Every published NPM figure is summed from npm's official daily range API; npm-stat is optional comparison context and never changes the official record.
 
 ---
 
@@ -49,7 +49,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/ARCANE-OS/apps/docs/assets/arcane-docs-social.png" width="100%" alt="Arcane OS documentation">
       </a>
       <h3><a href="https://thewizardnexus.github.io/ARCANE-OS/">ARCANE OS</a></h3>
-      <p>An AI-native operating environment for governed, accountable human-AI collaboration, with human-centered guidance for high-trust and regulated settings.</p>
+      <p><strong>Development.</strong> An AI-native environment for governed capabilities, policy gates, app-scoped data, and accountable human-AI collaboration.</p>
       <p><a href="https://thewizardnexus.github.io/ARCANE-OS/"><strong>Explore the public documentation &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
@@ -57,7 +57,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/arcane-os-sdk/assets/arcane-os-sdk-readme-header.png" width="100%" alt="Arcane OS SDK for building applications inside or outside Arcane OS">
       </a>
       <h3><a href="https://thewizardnexus.github.io/arcane-os-sdk/">Arcane OS SDK</a></h3>
-      <p>A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside the Arcane OS checkout.</p>
+      <p><strong>Development.</strong> An SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside the ARCANE OS checkout.</p>
       <p><a href="https://thewizardnexus.github.io/arcane-os-sdk/"><strong>Explore the SDK &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/arcane-os-sdk">View public repository</a></p>
     </td>
   </tr>
@@ -67,7 +67,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/AX/public/og.png" width="100%" alt="Arcane Exchange &mdash; the AI bazaar between worlds">
       </a>
       <h3><a href="https://thewizardnexus.github.io/AX/">Arcane Exchange (AX)</a></h3>
-      <p>A wizard-space bazaar for Arcane applications, AI tools, public catalogs, and private portals.</p>
+      <p><strong>Public foundation.</strong> A discovery marketplace for Arcane applications, AI tools, public catalogs, and private portals—not an installer.</p>
       <p><a href="https://thewizardnexus.github.io/AX/"><strong>Enter the Exchange &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
@@ -75,7 +75,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/Astrolabe/assets/astrolabe-readme-header.png" width="100%" alt="Astrolabe &mdash; navigate the TWiN ecosystem">
       </a>
       <h3><a href="https://thewizardnexus.github.io/Astrolabe/">Astrolabe</a></h3>
-      <p>An interactive map that makes the TWiN ecosystem understandable and navigable across foundations, platforms, products, programs, audiences, funding, and native hosts.</p>
+      <p><strong>Live map.</strong> An interactive view that makes the TWiN ecosystem understandable and navigable across foundations, platforms, products, programs, audiences, funding, and native hosts.</p>
       <p><a href="https://thewizardnexus.github.io/Astrolabe/"><strong>Navigate the ecosystem &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/Astrolabe">View public repository</a></p>
     </td>
   </tr>
@@ -85,7 +85,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/DBOPFS/assets/og.png" width="100%" alt="DBOPFS browser-native database">
       </a>
       <h3><a href="https://thewizardnexus.github.io/DBOPFS/">DBOPFS</a></h3>
-      <p><strong>Publicly source-available.</strong> DBOPFS is a browser-native database built on the Origin Private File System: tables become directories, records become files, and data stays local unless exported.</p>
+      <p><strong>Released 1.0.0 and publicly source-available.</strong> DBOPFS is a browser-native local data layer built on OPFS: tables become directories, records become files, and data stays local unless exported.</p>
       <p><a href="https://thewizardnexus.github.io/DBOPFS/"><strong>Explore the developer site &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS">View public repository</a></p>
     </td>
     <td width="50%" valign="top">
@@ -93,7 +93,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://raw.githubusercontent.com/TheWizardNexus/DBOPFS-Studio/main/assets/dbopfs-studio-readme-header.png" width="100%" alt="DBOPFS Studio &mdash; browser data made legible">
       </a>
       <h3><a href="https://thewizardnexus.github.io/DBOPFS-Studio/">DBOPFS Studio</a></h3>
-      <p>A Chromium workspace for exploring, editing, previewing, printing, and managing DBOPFS application data stored in OPFS.</p>
+      <p><strong>Development 0.1.</strong> A Chromium workspace for exploring, editing, previewing, printing, and managing DBOPFS application data stored in OPFS.</p>
       <p><a href="https://thewizardnexus.github.io/DBOPFS-Studio/"><strong>Explore DBOPFS Studio &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/DBOPFS-Studio">View public repository</a></p>
     </td>
   </tr>
@@ -103,7 +103,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="assets/spellwire-readme-header.png" width="100%" alt="SpellWire &mdash; auditable communication for humans and AI emissaries">
       </a>
       <h3><a href="https://thewizardnexus.github.io/SpellWire/">SpellWire</a></h3>
-      <p>A private, invite-only, auditable communications ledger for human-and-AI project teams to exchange context, evidence, requests, and decisions.</p>
+      <p><strong>Public guide; private system.</strong> An auditable protocol for human-and-AI project teams to exchange context, evidence, requests, and decisions.</p>
       <p><a href="https://thewizardnexus.github.io/SpellWire/"><strong>Explore the public guide &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
@@ -111,7 +111,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/Toshokann/assets/toshokann-knowledge-hall.png" width="100%" alt="Toshokann &mdash; a home for knowledge">
       </a>
       <h3><a href="https://thewizardnexus.github.io/Toshokann/">Toshokann</a></h3>
-      <p>A neutral, extensible foundation for organizing, retaining, finding, and sharing institutional knowledge&mdash;built to become a library, archive, repository, or information-sharing home.</p>
+      <p><strong>Public documentation foundation.</strong> A neutral base for organizing and retrieving institutional knowledge as a library, archive, repository, or information-sharing home.</p>
       <p><a href="https://thewizardnexus.github.io/Toshokann/"><strong>Explore Toshokann &rarr;</strong></a></p>
     </td>
   </tr>
@@ -121,7 +121,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="assets/twin-compass-readme-header.png" width="100%" alt="TWiN Compass &mdash; moral direction and behavioral-health awareness">
       </a>
       <h3><a href="https://thewizardnexus.github.io/TWiN-Compass/">TWiN Compass</a></h3>
-      <p>A moral, ethical, culturally aware, behavioral-health-informed AI layer that helps purpose-built models reason and communicate more safely while keeping people accountable.</p>
+      <p><strong>Released 1.0.0 source kit.</strong> A moral, ethical, culturally aware, behavioral-health-informed layer for purpose-built local models, with people kept accountable.</p>
       <p><a href="https://thewizardnexus.github.io/TWiN-Compass/"><strong>Explore TWiN Compass &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
@@ -129,7 +129,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/KEMPO/public/og.png" width="100%" alt="KEMPO &mdash; ancient judgment for future intelligence">
       </a>
       <h3><a href="https://thewizardnexus.github.io/KEMPO/">KEMPO</a></h3>
-      <p>A human-scored, 100-prompt evaluation of AI judgment across behavioral-safety, ethics, cyber, crisis, and public-safety categories.</p>
+      <p><strong>Evaluation v6.</strong> A repeatable, human-scored 100-scenario evaluation of AI judgment across behavioral safety, ethics, cyber, crisis, and public-safety categories.</p>
       <p><a href="https://thewizardnexus.github.io/KEMPO/"><strong>Explore KEMPO &rarr;</strong></a></p>
     </td>
   </tr>
@@ -139,7 +139,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/Sentinel/public/og.png" width="100%" alt="Sentinel &mdash; provenance-first investigative intelligence">
       </a>
       <h3><a href="https://thewizardnexus.github.io/Sentinel/">Sentinel</a></h3>
-      <p>Provenance-first investigative intelligence that turns complex records into source-cited, human-reviewed leads and actionable reports.</p>
+      <p><strong>Development.</strong> Provenance-first investigative intelligence that turns complex records into source-cited, human-reviewed leads and reports.</p>
       <p><a href="https://thewizardnexus.github.io/Sentinel/"><strong>Explore Sentinel &rarr;</strong></a></p>
     </td>
     <td width="50%" valign="top">
@@ -147,7 +147,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/Scamurai/public/og.png" width="100%" alt="Scamurai &mdash; detect deception and defend the human">
       </a>
       <h3><a href="https://thewizardnexus.github.io/Scamurai/">Scamurai</a></h3>
-      <p>A human-centered scam and abuse defense suite built around evidence, explanation, consent, and agency.</p>
+      <p><strong>Pre-release.</strong> A human-centered scam and abuse defense foundation built around evidence, explanation, consent, and agency.</p>
       <p><a href="https://thewizardnexus.github.io/Scamurai/"><strong>Explore Scamurai &rarr;</strong></a></p>
     </td>
   </tr>
@@ -157,13 +157,13 @@ Every published TWiN GitHub Pages site is included below, including public sites
         <img src="https://thewizardnexus.github.io/Redress/public/og.png" width="100%" alt="Redress &mdash; a source-grounded legal-practice workbench">
       </a>
       <h3><a href="https://thewizardnexus.github.io/Redress/">Redress</a></h3>
-      <p>A source-grounded legal-practice workbench for organizing records, tracing material claims to evidence, and preparing analysis, drafts, research, and hearings for human review.</p>
+      <p><strong>Currently inside ARCANE OS.</strong> A source-grounded legal-practice workbench for organizing records, tracing claims to evidence, and preparing work for human review; no standalone release is claimed.</p>
       <p><a href="https://thewizardnexus.github.io/Redress/"><strong>Explore Redress &rarr;</strong></a></p>
     </td>
   </tr>
 </table>
 
-**Publishing next:** PreCrisis, SDE, and Warrior Spirit Companion have GitHub Pages configured but do not yet have published sites. They will be linked here after their first deployments are live.
+**Publishing next:** PreCrisis, SDE, and Warrior Spirit Companion are in development or planning and do not yet have public sites. They will be linked here only after their first public deployments are live.
 
 All public TWiN project repositories are represented above. [View this profile's public repository &rarr;](https://github.com/TheWizardNexus/TheWizardNexus)
 
@@ -178,13 +178,13 @@ All public TWiN project repositories are represented above. [View this profile's
 
 ## Our mission
 
-We are a **woman-led team made up entirely of service-connected disabled Veterans**. Founded by **Johanna “JZ” Zollmann, LCSW**, a former U.S. Army Behavioral Health Officer, alongside her partner, a U.S. Air Force Veteran and member of the national cybersecurity community, The Wizard Nexus bridges the space between complex challenges and humane, evidence-informed solutions.
+We are a **woman-led, Veteran-founded, clinically informed team**. Founded by **Johanna “JZ” Zollmann, LCSW**, a former U.S. Army Behavioral Health Officer, alongside **Roshi**, a U.S. Air Force Veteran and deep-tech builder, The Wizard Nexus bridges the space between complex challenges and humane, evidence-informed solutions.
 
-Our approach is simple:
+Our PreCrisis earlier-intervention lifecycle is:
 
 > **Optimize → Detect → Prevent → Intervene**
 
-We call the practice **KEMPO**: *Knowledge, Empower, Monitor, Prevent, Optimize* — an AI martial art for behavioral and mental health. Like judo, for your mind.
+**KEMPO** is a distinct evaluation and training practice: *Knowledge → Empower → Monitor → Prevent → Optimize* — an AI martial art for behavioral and mental health. Like judo, for your mind.
 
 ## Meet the team
 

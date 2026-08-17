@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T18:41:28.913Z",
+  "generatedAt": "2026-08-17T22:54:24.737Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -22,6 +22,26 @@
     "stars": 2
   },
   "repositories": [
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-08-17T19:09:11Z"
+    },
     {
       "name": "DBOPFS-Studio",
       "fullName": "TheWizardNexus/DBOPFS-Studio",
@@ -61,26 +81,6 @@
       "license": "PolyForm-Noncommercial-1.0.0",
       "createdAt": "2026-08-11T20:08:22Z",
       "updatedAt": "2026-08-17T16:29:39Z"
-    },
-    {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
-      "language": "Unclassified",
-      "stars": 1,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 1,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-14T23:09:47Z"
     },
     {
       "name": "arcane-os-sdk",
