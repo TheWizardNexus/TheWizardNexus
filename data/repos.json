@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T22:54:24.737Z",
+  "generatedAt": "2026-08-18T07:21:38.121Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -23,46 +23,6 @@
   },
   "repositories": [
     {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
-      "language": "JavaScript",
-      "stars": 1,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 1,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-17T19:09:11Z"
-    },
-    {
-      "name": "DBOPFS-Studio",
-      "fullName": "TheWizardNexus/DBOPFS-Studio",
-      "description": "An OPFS and DBOPFS workspace for Chrome, Edge, Brave, Vivaldi, Opera, and other Chromium browsers: explore, edit, preview, print, and manage site storage.",
-      "explanation": "A Chromium workspace for exploring, editing, previewing, printing, and managing DBOPFS application data stored in OPFS.",
-      "url": "https://github.com/TheWizardNexus/DBOPFS-Studio",
-      "homepage": "https://thewizardnexus.github.io/DBOPFS-Studio/",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 0,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "PolyForm-Noncommercial-1.0.0",
-      "createdAt": "2026-08-13T19:17:47Z",
-      "updatedAt": "2026-08-17T17:11:33Z"
-    },
-    {
       "name": "DBOPFS",
       "fullName": "TheWizardNexus/DBOPFS",
       "description": "OPFS based Database",
@@ -80,7 +40,7 @@
       "topics": [],
       "license": "PolyForm-Noncommercial-1.0.0",
       "createdAt": "2026-08-11T20:08:22Z",
-      "updatedAt": "2026-08-17T16:29:39Z"
+      "updatedAt": "2026-08-17T23:25:21Z"
     },
     {
       "name": "arcane-os-sdk",
@@ -100,7 +60,47 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-08-14T21:38:18Z"
+      "updatedAt": "2026-08-17T23:22:16Z"
+    },
+    {
+      "name": "DBOPFS-Studio",
+      "fullName": "TheWizardNexus/DBOPFS-Studio",
+      "description": "An OPFS and DBOPFS workspace for Chrome, Edge, Brave, Vivaldi, Opera, and other Chromium browsers: explore, edit, preview, print, and manage site storage.",
+      "explanation": "A Chromium workspace for exploring, editing, previewing, printing, and managing DBOPFS application data stored in OPFS.",
+      "url": "https://github.com/TheWizardNexus/DBOPFS-Studio",
+      "homepage": "https://thewizardnexus.github.io/DBOPFS-Studio/",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "PolyForm-Noncommercial-1.0.0",
+      "createdAt": "2026-08-13T19:17:47Z",
+      "updatedAt": "2026-08-17T23:19:33Z"
+    },
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-08-17T23:06:44Z"
     },
     {
       "name": "Astrolabe",
