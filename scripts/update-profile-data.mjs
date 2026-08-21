@@ -7,7 +7,6 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_DIR = path.join(ROOT, "data");
 const ASSET_DIR = path.join(ROOT, "assets");
 const README_PATH = path.join(ROOT, "README.md");
-const INDEX_PATH = path.join(ROOT, "index.html");
 const PROJECTS_PATH = path.join(DATA_DIR, "projects.json");
 const SNAPSHOT_PATH = path.join(DATA_DIR, "repos.json");
 const OWNER = "TheWizardNexus";
@@ -213,7 +212,7 @@ function createSignalSvg({ projects, repoSnapshot, npmSnapshot, historySnapshot 
     timeZone: "UTC",
   });
   const metrics = [
-    ["LIVE INTERFACES", projects.published.length, "published sites and guides"],
+    ["PROJECT SITES", projects.published.length, "published sites and guides"],
     ["MAPPED POINTS", projects.mapSnapshot.points, `${projects.mapSnapshot.relationships} recorded relationships`],
     ["PUBLIC REPOSITORIES", repoSnapshot.counts.total, `${repoSnapshot.counts.stars} stars received`],
     ["NPM MODULES", npmSnapshot.packageCount, `${fullNumber(historySnapshot.total)} official-range downloads`],
@@ -230,7 +229,7 @@ function createSignalSvg({ projects, repoSnapshot, npmSnapshot, historySnapshot 
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="980" height="510" viewBox="0 0 980 510" role="img" aria-labelledby="title description">
   <title id="title">The Wizard Nexus public ecosystem signal</title>
-  <desc id="description">${projects.published.length} live project interfaces, ${projects.mapSnapshot.points} mapped points, ${projects.mapSnapshot.relationships} relationships, ${repoSnapshot.counts.total} public repositories, and ${historySnapshot.total} official npm range downloads.</desc>
+  <desc id="description">${projects.published.length} published project sites, ${projects.mapSnapshot.points} mapped points, ${projects.mapSnapshot.relationships} relationships, ${repoSnapshot.counts.total} public repositories, and ${historySnapshot.total} official npm range downloads.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10263a"/><stop offset="1" stop-color="#07111d"/></linearGradient>
     <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#83d6a2"/><stop offset=".52" stop-color="#55d7df"/><stop offset="1" stop-color="#aa91ff"/></linearGradient>
@@ -532,7 +531,7 @@ const readmePattern = new RegExp(`${readmeStart}[\\s\\S]*?${readmeEnd}`);
 if (!readmePattern.test(readme)) throw new Error("README telemetry count markers are missing.");
 const readmeSummary = `${readmeStart}
 <p align="center">
-  <strong>${projects.published.length} published interfaces · ${projects.mapSnapshot.points} mapped ecosystem points · ${projects.mapSnapshot.relationships} relationships · ${repoSnapshot.counts.total} public repositories</strong><br>
+  <strong>${projects.published.length} published project sites · ${projects.mapSnapshot.points} mapped ecosystem points · ${projects.mapSnapshot.relationships} relationships · ${repoSnapshot.counts.total} public repositories</strong><br>
   <sub><strong>${fullNumber(historySnapshot.total)} official npm range downloads</strong> from ${longDate(historySnapshot.period.availableFrom)} through ${longDate(historySnapshot.period.availableUntil)} · npm-stat is an optional comparison only</sub><br>
   <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
 </p>
@@ -543,11 +542,11 @@ const latestRepositoryUpdate = repositories
   .filter(Boolean)
   .sort()
   .at(-1);
-let updatedIndex = await readFile(INDEX_PATH, "utf8");
-const indexFallbacks = {
+const sharedFallbacks = {
   "project-total": projects.published.length,
   "mapped-points": projects.mapSnapshot.points,
   "mapped-relationships": projects.mapSnapshot.relationships,
+  "next-total": projects.publishingNext.length,
   "repo-total-hero": repoSnapshot.counts.total,
   "repo-total": repoSnapshot.counts.total,
   "repo-original": repoSnapshot.counts.original,
@@ -555,7 +554,7 @@ const indexFallbacks = {
   "repo-updated": latestRepositoryUpdate
     ? new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(latestRepositoryUpdate))
     : "—",
-  "project-result-count": `${projects.published.length} published interfaces in the public constellation.`,
+  "project-result-count": `${projects.published.length} published project sites in the public constellation.`,
   "repo-result-count": `${repoSnapshot.counts.total} public repositories in the atlas.`,
   "npm-history-total": fullNumber(historySnapshot.total),
   "npm-week": fullNumber(npmSnapshot.totals.week),
@@ -575,8 +574,32 @@ const indexFallbacks = {
       : "Official npm range series is authoritative and published unchanged; optional npm-stat comparison differs."
     : "Official npm range series is authoritative; optional npm-stat comparison is unavailable.",
 };
-for (const [id, value] of Object.entries(indexFallbacks)) {
-  updatedIndex = replaceElementText(updatedIndex, id, value);
+
+const pageFallbacks = new Map([
+  [path.join(ROOT, "index.html"), ["project-total", "mapped-points", "mapped-relationships", "repo-total-hero"]],
+  [path.join(ROOT, "ecosystem.html"), ["project-total", "mapped-points", "mapped-relationships", "next-total", "project-result-count"]],
+  [path.join(ROOT, "code.html"), ["repo-total", "repo-original", "repo-stars", "repo-updated", "repo-result-count"]],
+  [path.join(ROOT, "signal.html"), [
+    "project-total",
+    "mapped-points",
+    "mapped-relationships",
+    "repo-total",
+    "npm-history-total",
+    "npm-week",
+    "npm-month",
+    "npm-year",
+    "npm-chart-period",
+    "npm-first-day",
+    "npm-peak-day",
+    "npm-coverage",
+    "npm-status",
+  ]],
+]);
+const updatedPages = [];
+for (const [pagePath, fallbackIds] of pageFallbacks) {
+  let html = await readFile(pagePath, "utf8");
+  for (const id of fallbackIds) html = replaceElementText(html, id, sharedFallbacks[id]);
+  updatedPages.push([pagePath, html]);
 }
 
 await Promise.all([
@@ -586,7 +609,7 @@ await Promise.all([
   writeFile(PROJECTS_PATH, `${JSON.stringify(projects, null, 2)}\n`, "utf8"),
   writeFile(path.join(ASSET_DIR, "twin-signal.svg"), `${createSignalSvg({ projects, repoSnapshot, npmSnapshot, historySnapshot })}\n`, "utf8"),
   writeFile(README_PATH, updatedReadme, "utf8"),
-  writeFile(INDEX_PATH, updatedIndex, "utf8"),
+  ...updatedPages.map(([pagePath, html]) => writeFile(pagePath, html, "utf8")),
 ]);
 
 const snapshotStats = await stat(SNAPSHOT_PATH);

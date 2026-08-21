@@ -22,7 +22,10 @@ test("curated ecosystem accounts for every published interface without confusing
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(projects.published.every((project) => project.url.startsWith("https://")));
   assert.ok(projects.published.every((project) => project.sourceStatus.trim().length > 0));
+  assert.ok(projects.published.every((project) => project.sourceBoundary.trim().length > 0));
+  assert.ok(projects.published.every((project) => project.maturity.trim().length > 0));
   assert.ok(projects.published.every((project) => project.stage.trim().length > 0));
+  assert.ok(projects.publishingNext.every((project) => project.stage === "Development"));
   assert.equal(stages.get("arcane-os"), "Development");
   assert.equal(stages.get("dbopfs"), "Released 1.0.0");
   assert.equal(stages.get("twin-compass"), "Released 1.0.0");
@@ -185,57 +188,91 @@ test("npm-stat zeros, omissions, differences, malformed values, and outages neve
   assert.equal(unavailable.officialMinusReference, null);
 });
 
-test("README and static site expose the ecosystem atlas and compact NPM signal", async () => {
-  const [readme, html, script, css, svg, history, generator] = await Promise.all([
+test("the public nexus uses focused pages while preserving the complete ecosystem record", async () => {
+  const pageNames = ["index.html", "ecosystem.html", "practice.html", "trust.html", "people.html", "code.html", "signal.html", "work.html"];
+  const [readme, pages, script, css, svg, history, generator, errorPage] = await Promise.all([
     read("README.md"),
-    read("index.html"),
+    Promise.all(pageNames.map(read)),
     read("app.js"),
     read("styles.css"),
     read("assets/twin-signal.svg"),
     json("data/npm-history.json"),
     read("scripts/update-profile-data.mjs"),
+    read("404.html"),
   ]);
+  const byName = new Map(pageNames.map((name, index) => [name, pages[index]]));
   const officialTotal = history.total.toLocaleString("en-US");
 
   assert.match(readme, /assets\/twin-signal\.svg/);
   assert.match(readme, /thewizardnexus\.github\.io\/TheWizardNexus/);
-  assert.match(html, /id="project-grid"/);
-  assert.match(html, /id="team"/);
-  assert.match(html, /id="repo-grid"/);
-  assert.match(html, /id="npm-chart"/);
-  assert.match(html, /Johanna “JZ” Zollmann, LCSW/);
-  assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/turtlesallthewaydown\/"/);
-  assert.match(html, /Stage before spectacle/);
-  assert.match(html, /The complete directory remains available without scripts/);
-  assert.match(html, /Public code remains available without scripts/);
+  for (const pageName of pageNames.slice(1)) assert.match(byName.get("index.html"), new RegExp(`href="${pageName}"`));
+  assert.doesNotMatch(byName.get("index.html"), /id="project-grid"|id="repo-grid"|id="npm-chart"/);
+  assert.match(byName.get("ecosystem.html"), /id="project-grid"/);
+  assert.match(byName.get("ecosystem.html"), /The complete directory remains available without scripts/);
+  assert.match(byName.get("practice.html"), /Optimize[\s\S]*Detect[\s\S]*Prevent[\s\S]*Intervene/);
+  assert.match(byName.get("trust.html"), /Stage before spectacle/);
+  assert.match(byName.get("people.html"), /Johanna “JZ” Zollmann, LCSW/);
+  assert.match(byName.get("people.html"), /href="https:\/\/www\.linkedin\.com\/in\/turtlesallthewaydown\/"/);
+  assert.match(byName.get("code.html"), /id="repo-grid"/);
+  assert.match(byName.get("code.html"), /Public code remains available without scripts/);
+  assert.match(byName.get("signal.html"), /id="npm-chart"/);
+  assert.doesNotMatch(byName.get("signal.html"), /Loading (?:the TWiN NPM|daily values|the latest public snapshot)/);
+  assert.match(byName.get("work.html"), /The dojo is open/);
+  assert.match(errorPage, /href="\/TheWizardNexus\/styles\.css"/);
+  assert.match(errorPage, /href="\/TheWizardNexus\/ecosystem\.html"/);
+  for (const html of pages) {
+    assert.match(html, /href="styles\.css"/);
+    assert.match(html, /src="app\.js"/);
+    assert.match(html, /class="site-header"/);
+  }
   assert.match(script, /data\/projects\.json/);
   assert.match(script, /stage-badge/);
-  assert.match(script, /aria-label="Open \$\{escapeHtml\(project\.name\)\} — \$\{escapeHtml\(project\.stage\)\}"/);
+  assert.match(script, /aria-label="Open \$\{escapeHtml\(project\.name\)\} — \$\{escapeHtml\(maturity\)\}"/);
   assert.match(script, /data\/repos\.json/);
   assert.match(script, /data\/npm-history\.json/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(svg, /TWiN PUBLIC ECOSYSTEM/);
+  assert.match(svg, /PROJECT SITES/);
   assert.match(svg, /MAPPED POINTS/);
   assert.match(readme, new RegExp(`${officialTotal} official npm range downloads`));
   assert.match(svg, new RegExp(`${officialTotal} official-range downloads`));
   assert.match(svg, new RegExp(`${history.total} official npm range downloads`));
+  assert.match(generator, /ecosystem\.html/);
+  assert.match(generator, /code\.html/);
+  assert.match(generator, /signal\.html/);
   assert.doesNotMatch(generator, /downloads\/point/);
   assert.match(generator, /downloads\/range/);
 });
 
-test("Pages metadata and workflow agree on the canonical TWiN site", async () => {
-  const [html, robots, sitemap, workflow] = await Promise.all([
-    read("index.html"),
+test("every focused page has canonical metadata and every internal HTML route resolves", async () => {
+  const pageNames = ["index.html", "ecosystem.html", "practice.html", "trust.html", "people.html", "code.html", "signal.html", "work.html"];
+  const [pages, rootEntries, robots, sitemap, workflow] = await Promise.all([
+    Promise.all(pageNames.map(read)),
+    readdir(ROOT),
     read("robots.txt"),
     read("sitemap.xml"),
     read(".github/workflows/profile-site.yml"),
   ]);
-  const canonical = "https://thewizardnexus.github.io/TheWizardNexus/";
+  const canonicalRoot = "https://thewizardnexus.github.io/TheWizardNexus/";
 
-  assert.match(html, new RegExp(`<link rel="canonical" href="${canonical}"`));
-  assert.match(html, new RegExp(`<meta property="og:url" content="${canonical}"`));
-  assert.match(robots, new RegExp(`${canonical}sitemap\\.xml`));
-  assert.match(sitemap, new RegExp(`<loc>${canonical}</loc>`));
+  for (const [index, html] of pages.entries()) {
+    const pageName = pageNames[index];
+    const canonical = pageName === "index.html" ? canonicalRoot : `${canonicalRoot}${pageName}`;
+    const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+    assert.equal(new Set(ids).size, ids.length, `${pageName} should not contain duplicate IDs`);
+    assert.equal([...html.matchAll(/<h1\b/g)].length, 1, `${pageName} should contain one primary heading`);
+    assert.match(html, new RegExp(`<link rel="canonical" href="${canonical}"`));
+    assert.match(html, new RegExp(`<meta property="og:url" content="${canonical}"`));
+    assert.match(html, /<meta property="og:image" content="https:\/\/thewizardnexus\.github\.io\/TheWizardNexus\/assets\/twin-ecosystem-og\.png">/);
+    assert.match(html, /<meta name="twitter:title" content="[^"]+">/);
+    assert.match(html, /<meta name="twitter:description" content="[^"]+">/);
+    assert.match(html, /<meta name="twitter:image:alt" content="[^"]+">/);
+    assert.match(sitemap, new RegExp(`<loc>${canonical}</loc>`));
+    const localLinks = [...html.matchAll(/<a\b[^>]*\bhref="([^"#]+\.html)"/g)].map((match) => match[1]);
+    for (const link of localLinks) assert.ok(rootEntries.includes(link), `${pageName} links to missing ${link}`);
+  }
+  assert.equal([...sitemap.matchAll(/<loc>/g)].length, pageNames.length);
+  assert.match(robots, new RegExp(`${canonicalRoot}sitemap\\.xml`));
   assert.match(workflow, /branches: \[main\]/);
   assert.match(workflow, /node --check app\.js/);
   assert.match(workflow, /node --test tests\/profile-site\.test\.mjs/);
@@ -245,30 +282,27 @@ test("Pages metadata and workflow agree on the canonical TWiN site", async () =>
   assert.match(workflow, /path: \./);
 });
 
-test("no-script HTML telemetry agrees with the generated data snapshots", async () => {
-  const [html, projects, repos, npm, history] = await Promise.all([
+test("no-script telemetry fallbacks agree across the focused pages", async () => {
+  const [home, ecosystem, code, signal, projects, repos, npm, history] = await Promise.all([
     read("index.html"),
+    read("ecosystem.html"),
+    read("code.html"),
+    read("signal.html"),
     json("data/projects.json"),
     json("data/repos.json"),
     json("data/npm-stats.json"),
     json("data/npm-history.json"),
   ]);
-
-  const expectations = {
-    "project-total": projects.published.length,
-    "mapped-points": projects.mapSnapshot.points,
-    "mapped-relationships": projects.mapSnapshot.relationships,
-    "repo-total-hero": repos.counts.total,
-    "repo-total": repos.counts.total,
-    "repo-original": repos.counts.original,
-    "repo-stars": repos.counts.stars,
-    "npm-history-total": history.total.toLocaleString("en-US"),
-    "npm-week": npm.totals.week.toLocaleString("en-US"),
-    "npm-month": npm.totals.month.toLocaleString("en-US"),
-    "npm-year": npm.totals.year.toLocaleString("en-US"),
-  };
-  for (const [id, expected] of Object.entries(expectations)) {
-    assert.equal(textById(html, id), String(expected), `#${id} should agree with its generated snapshot`);
+  const expectations = [
+    [home, { "project-total": projects.published.length, "mapped-points": projects.mapSnapshot.points, "mapped-relationships": projects.mapSnapshot.relationships, "repo-total-hero": repos.counts.total }],
+    [ecosystem, { "project-total": projects.published.length, "mapped-points": projects.mapSnapshot.points, "mapped-relationships": projects.mapSnapshot.relationships, "next-total": projects.publishingNext.length }],
+    [code, { "repo-total": repos.counts.total, "repo-original": repos.counts.original, "repo-stars": repos.counts.stars }],
+    [signal, { "project-total": projects.published.length, "mapped-points": projects.mapSnapshot.points, "mapped-relationships": projects.mapSnapshot.relationships, "repo-total": repos.counts.total, "npm-history-total": history.total.toLocaleString("en-US"), "npm-week": npm.totals.week.toLocaleString("en-US"), "npm-month": npm.totals.month.toLocaleString("en-US"), "npm-year": npm.totals.year.toLocaleString("en-US") }],
+  ];
+  for (const [html, pageExpectations] of expectations) {
+    for (const [id, expected] of Object.entries(pageExpectations)) {
+      assert.equal(textById(html, id), String(expected), `#${id} should agree with its generated snapshot`);
+    }
   }
 });
 

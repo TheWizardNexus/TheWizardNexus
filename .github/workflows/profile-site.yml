@@ -47,10 +47,10 @@ jobs:
 
       - name: Record a refreshed snapshot when needed
         run: |
-          if [[ -n "$(git status --porcelain -- README.md index.html data/projects.json data/npm-stats.json data/npm-history.json data/repos.json assets/twin-signal.svg)" ]]; then
+          if [[ -n "$(git status --porcelain -- README.md index.html ecosystem.html code.html signal.html data/projects.json data/npm-stats.json data/npm-history.json data/repos.json assets/twin-signal.svg)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -- README.md index.html data/projects.json data/npm-stats.json data/npm-history.json data/repos.json assets/twin-signal.svg
+            git add -- README.md index.html ecosystem.html code.html signal.html data/projects.json data/npm-stats.json data/npm-history.json data/repos.json assets/twin-signal.svg
             git commit -m "[Roshi's Codex PRIME] Refresh TWiN public signal"
             git pull --rebase origin main
             git push origin HEAD:main

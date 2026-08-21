@@ -9,22 +9,31 @@
 <p align="center">
   <a href="https://www.thewizardnexus.com/"><img alt="Website" src="https://img.shields.io/badge/Website-TheWizardNexus.com-6f42c1?style=for-the-badge"></a>
   <a href="https://www.linkedin.com/company/the-wizard-nexus/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="https://lifeline.precrisis.analyticsgateway.com/nelson/chat.html"><img alt="PreCrisis AI" src="https://img.shields.io/badge/Explore-PreCrisis_AI-00897B?style=for-the-badge"></a>
+  <a href="https://www.thewizardnexus.com/"><img alt="PreCrisis AI" src="https://img.shields.io/badge/Explore-PreCrisis_AI-00897B?style=for-the-badge"></a>
 </p>
 
 <p align="center">
   <a href="https://thewizardnexus.github.io/TheWizardNexus/">
-    <img src="assets/twin-signal.svg" width="100%" alt="The Wizard Nexus public ecosystem signal showing published interfaces, mapped ecosystem points, relationships, public repositories, and the emerging NPM footprint">
+    <img src="assets/twin-signal.svg" width="100%" alt="The Wizard Nexus public ecosystem signal showing published project sites, mapped ecosystem points, relationships, public repositories, and the emerging NPM footprint">
   </a>
 </p>
 
 <!-- profile-telemetry-counts:start -->
 <p align="center">
-  <strong>13 published interfaces · 78 mapped ecosystem points · 171 relationships · 5 public repositories</strong><br>
+  <strong>13 published project sites · 78 mapped ecosystem points · 171 relationships · 5 public repositories</strong><br>
   <sub><strong>138 official npm range downloads</strong> from January 1, 2026 through August 19, 2026 · npm-stat is an optional comparison only</sub><br>
   <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
 </p>
 <!-- profile-telemetry-counts:end -->
+
+<p align="center">
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/ecosystem.html">Ecosystem</a> ·
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/practice.html">Practice</a> ·
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/trust.html">Trust</a> ·
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/people.html">People</a> ·
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/code.html">Public code</a> ·
+  <a href="https://thewizardnexus.github.io/TheWizardNexus/signal.html">Public signal</a>
+</p>
 
 The live atlas centers the people, systems, evidence, and relationships that make up TWiN. It accounts for every published project interface and public repository while labeling both source boundaries and maturity: released, development, pre-release, public foundation, private system, and forthcoming are not interchangeable claims. NPM appears as a compact distribution signal—not as a proxy for people, outcomes, or mission impact. Every published NPM figure is summed from npm's official daily range API; npm-stat is optional comparison context and never changes the official record.
 

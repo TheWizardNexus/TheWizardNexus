@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071019">
+    <meta name="description" content="Read the sourced TWiN public signal: ecosystem bearings, repository footprint, and official NPM package-distribution telemetry.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TWiN Public Signal — The Wizard Nexus">
+    <meta property="og:description" content="Measured, sourced, and modest: verified public ecosystem and package-distribution telemetry.">
+    <meta property="og:url" content="https://thewizardnexus.github.io/TheWizardNexus/signal.html">
+    <meta property="og:image" content="https://thewizardnexus.github.io/TheWizardNexus/assets/twin-ecosystem-og.png">
+    <meta property="og:image:alt" content="The Wizard Nexus public ecosystem: human-centered systems, mapped relationships, and accountable human judgment.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TWiN Public Signal — The Wizard Nexus">
+    <meta name="twitter:description" content="Measured, sourced, and modest: verified public ecosystem and package-distribution telemetry.">
+    <meta name="twitter:image" content="https://thewizardnexus.github.io/TheWizardNexus/assets/twin-ecosystem-og.png">
+    <meta name="twitter:image:alt" content="The Wizard Nexus public ecosystem: human-centered systems, mapped relationships, and accountable human judgment.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://thewizardnexus.github.io/TheWizardNexus/signal.html">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <title>TWiN Public Signal — The Wizard Nexus</title>
+  </head>
+  <body data-page="signal">
+    <a class="skip-link" href="#main">Skip to the public signal</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Wizard Nexus home"><span class="brand-sigil" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-copy"><b>The Wizard Nexus</b><small>TWiN // Public nexus</small></span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <nav id="primary-navigation" aria-label="Primary navigation"><a href="ecosystem.html">Ecosystem</a><a href="practice.html">Practice</a><a href="trust.html">Trust</a><a href="people.html">People</a><a href="code.html">Code</a><a href="signal.html">Signal</a><a class="nav-cta" href="work.html">Work with us <span aria-hidden="true">↗</span></a></nav>
+    </header>
+
+    <main id="main">
+      <header class="page-hero signal-hero">
+        <div><p class="eyebrow"><span class="page-code">06</span> Sourced public telemetry</p><h1>Signals,<br><span>not spectacle.</span></h1></div>
+        <div class="page-hero-aside"><p>These numbers describe the public TWiN footprint. They are sourced, bounded, and kept separate from claims about people, clinical outcomes, production readiness, or mission impact.</p><a class="text-link" href="trust.html">Read what the numbers do not mean <span aria-hidden="true">→</span></a></div>
+      </header>
+
+      <section class="page-metrics signal-metrics" aria-label="TWiN public ecosystem summary">
+        <p><span>Published project sites</span><strong id="project-total">13</strong></p>
+        <p><span>Mapped points</span><strong id="mapped-points">78</strong></p>
+        <p><span>Relationships</span><strong id="mapped-relationships">171</strong></p>
+        <p><span>Public repositories</span><strong id="repo-total">5</strong></p>
+      </section>
+      <p class="freshness" id="freshness"><span aria-hidden="true"></span> Static public snapshot embedded; live refresh runs when available.</p>
+
+      <section class="npm-section" aria-labelledby="npm-title">
+        <div class="npm-intro"><p class="eyebrow">Official package distribution</p><h2 id="npm-title">A small signal.<br><span>Now in motion.</span></h2><p>NPM is one emerging distribution channel in a much larger ecosystem. Every displayed count comes from npm’s official daily range API. The optional npm-stat comparison never changes the published record.</p><a class="text-link" href="https://www.npmjs.com/~thewizardnexus">Open the TWiN NPM profile <span aria-hidden="true">↗</span></a></div>
+
+        <article class="npm-panel" aria-labelledby="npm-chart-title">
+          <header class="npm-panel-header"><div><p class="eyebrow" id="npm-chart-kicker">Official range history</p><h3 id="npm-chart-title">All TWiN modules</h3><p id="npm-chart-period">January 1, 2026–August 19, 2026 · official daily range series</p></div><p class="npm-total"><span>Official downloads</span><strong id="npm-history-total">138</strong></p></header>
+          <div class="npm-metrics" role="group" aria-label="Rolling NPM downloads"><p><span>Last week</span><strong id="npm-week">16</strong></p><p><span>Last month</span><strong id="npm-month">138</strong></p><p><span>Last year</span><strong id="npm-year">138</strong></p></div>
+          <div class="chart-frame" id="chart-frame"><canvas id="npm-chart" role="img" aria-label="The interactive NPM history chart loads when scripts are available; static official totals are shown above."></canvas><output class="chart-tooltip" id="chart-tooltip" hidden></output></div>
+          <dl class="chart-stats"><div><dt>First download day</dt><dd id="npm-first-day">August 11, 2026 · 102</dd></div><div><dt>Peak day</dt><dd id="npm-peak-day">August 11, 2026 · 102</dd></div><div><dt>Coverage</dt><dd id="npm-coverage">231 official range days · 1 module</dd></div></dl>
+          <details class="npm-table-details"><summary id="npm-table-summary">Browse the complete daily download record</summary><div class="npm-table-scroll" role="region" aria-labelledby="npm-table-summary" tabindex="0"><table class="npm-data-table"><caption id="npm-daily-caption">Official daily npm range record</caption><thead><tr><th scope="col">Date</th><th scope="col">Downloads</th></tr></thead><tbody id="npm-daily-body"><tr><td colspan="2">The daily table loads when public telemetry scripts are available; official summary totals remain above.</td></tr></tbody></table></div></details>
+          <div class="package-list" id="package-list"></div>
+          <p class="data-status" id="npm-status" role="status" aria-live="polite">Official npm range series is authoritative; optional npm-stat comparison matches point for point.</p>
+        </article>
+      </section>
+
+      <section class="source-notes" aria-labelledby="source-notes-title"><div><p class="eyebrow">Source ledger</p><h2 id="source-notes-title">Every signal<br>keeps its boundary.</h2></div><div class="source-note-grid"><article><span>ECOSYSTEM</span><p>Published interfaces come from the curated TWiN profile; mapped points and relationships come from Astrolabe.</p></article><article><span>CODE</span><p>Repository counts come from GitHub’s public organization inventory.</p></article><article><span>NPM</span><p>Daily counts and totals come from the official npm download-count range endpoint.</p></article><article><span>COMPARISON</span><p>npm-stat is optional context only and is never used to correct official values.</p></article></div></section>
+    </main>
+    <footer class="site-footer"><div class="footer-brand"><span class="brand-sigil small" aria-hidden="true"><i></i><i></i><i></i><i></i></span><p><strong>The Wizard Nexus</strong><span>Behavioral health intelligence in service of human connection.</span></p></div><nav aria-label="Footer navigation"><a href="https://www.thewizardnexus.com/">Official site ↗</a><a href="https://github.com/TheWizardNexus">GitHub ↗</a><a href="https://www.linkedin.com/company/the-wizard-nexus/">LinkedIn ↗</a></nav><p class="footer-note">Public ecosystem atlas // <span data-current-year>2026</span></p></footer>
+  </body>
+</html>
