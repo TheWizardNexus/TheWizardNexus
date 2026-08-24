@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T07:13:55.642Z",
+  "generatedAt": "2026-08-24T07:40:47.497Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -29,7 +29,7 @@
       "explanation": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
       "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
       "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/",
-      "language": "JavaScript",
+      "language": "HTML",
       "stars": 0,
       "forks": 0,
       "openIssues": 0,
@@ -40,7 +40,7 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-08-23T06:37:14Z"
+      "updatedAt": "2026-08-24T06:45:08Z"
     },
     {
       "name": "TheWizardNexus",
@@ -60,7 +60,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-22T07:10:59Z"
+      "updatedAt": "2026-08-23T07:14:52Z"
     },
     {
       "name": "DBOPFS",
