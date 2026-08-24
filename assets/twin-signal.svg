@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="510" viewBox="0 0 980 510" role="img" aria-labelledby="title description">
   <title id="title">The Wizard Nexus public ecosystem signal</title>
-  <desc id="description">13 published project sites, 78 mapped points, 171 relationships, 5 public repositories, and 141 official npm range downloads.</desc>
+  <desc id="description">13 published project sites, 78 mapped points, 171 relationships, 6 public repositories, and 141 official npm range downloads.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10263a"/><stop offset="1" stop-color="#07111d"/></linearGradient>
     <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#83d6a2"/><stop offset=".52" stop-color="#55d7df"/><stop offset="1" stop-color="#aa91ff"/></linearGradient>
@@ -39,7 +39,7 @@
     </g><g transform="translate(500 202)">
       <rect width="206" height="154" rx="18" fill="#0a1a2a" stroke="#23415a"/>
       <text x="18" y="34" class="label">PUBLIC REPOSITORIES</text>
-      <text x="18" y="88" class="metric">5</text>
+      <text x="18" y="88" class="metric">6</text>
       <text x="18" y="119" class="detail">2 stars received</text>
     </g><g transform="translate(726 202)">
       <rect width="206" height="154" rx="18" fill="#0a1a2a" stroke="#23415a"/>
