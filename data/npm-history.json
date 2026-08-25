@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-24T15:27:52.734Z",
+  "generatedAt": "2026-08-25T07:27:02.442Z",
   "maintainer": "thewizardnexus",
   "source": {
     "referenceProvider": "npm-stat.com",
     "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-08-23",
-    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-08-23",
+    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-08-24",
     "referenceRole": "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
     "authority": "Official npm download-count range API; sole authority for every published daily value and total.",
     "authorityDocumentation": "https://github.com/npm/registry/blob/main/docs/download-counts.md",
@@ -20,7 +20,7 @@
   },
   "period": {
     "requestedFrom": "2026-01-01",
-    "requestedUntil": "2026-08-23",
+    "requestedUntil": "2026-08-24",
     "availableFrom": "2026-01-01",
     "availableUntil": "2026-08-23"
   },

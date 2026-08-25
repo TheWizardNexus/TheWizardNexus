@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T15:27:52.734Z",
+  "generatedAt": "2026-08-25T07:27:02.442Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -15,8 +15,8 @@
     "following": 0
   },
   "counts": {
-    "total": 6,
-    "original": 6,
+    "total": 8,
+    "original": 8,
     "forks": 0,
     "archived": 0,
     "stars": 2
@@ -29,7 +29,7 @@
       "explanation": "The public facing website",
       "url": "https://github.com/TheWizardNexus/TheWizardNexus.com",
       "homepage": "https://thewizardnexus.github.io/TheWizardNexus.com/",
-      "language": "Unclassified",
+      "language": "HTML",
       "stars": 0,
       "forks": 0,
       "openIssues": 0,
@@ -40,7 +40,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-08-24T15:15:25Z"
+      "updatedAt": "2026-08-25T07:26:11Z"
     },
     {
       "name": "arcane-os-sdk",
@@ -49,7 +49,7 @@
       "explanation": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
       "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
       "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/",
-      "language": "HTML",
+      "language": "JavaScript",
       "stars": 0,
       "forks": 0,
       "openIssues": 0,
@@ -60,7 +60,47 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-08-24T14:57:07Z"
+      "updatedAt": "2026-08-25T06:59:38Z"
+    },
+    {
+      "name": "Mystics-and-Minds",
+      "fullName": "TheWizardNexus/Mystics-and-Minds",
+      "description": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
+      "explanation": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
+      "url": "https://github.com/TheWizardNexus/Mystics-and-Minds",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-08-24T15:56:08Z",
+      "updatedAt": "2026-08-25T04:38:17Z"
+    },
+    {
+      "name": "Zen-Sentry-Foundation",
+      "fullName": "TheWizardNexus/Zen-Sentry-Foundation",
+      "description": "Zen Sentry Foundation is a veteran-led nonprofit advancing upstream behavioral health, Veteran suicide prevention, responsible AI ethics, and human-centered systems designed to strengthen support before crisis.",
+      "explanation": "Zen Sentry Foundation is a veteran-led nonprofit advancing upstream behavioral health, Veteran suicide prevention, responsible AI ethics, and human-centered systems designed to strengthen support before crisis.",
+      "url": "https://github.com/TheWizardNexus/Zen-Sentry-Foundation",
+      "homepage": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-08-24T17:06:34Z",
+      "updatedAt": "2026-08-25T01:59:50Z"
     },
     {
       "name": "TheWizardNexus",
@@ -80,7 +120,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-24T07:41:26Z"
+      "updatedAt": "2026-08-24T15:32:32Z"
     },
     {
       "name": "DBOPFS",
