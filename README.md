@@ -153,7 +153,7 @@ Every published TWiN GitHub Pages site is included below, including public sites
     </td>
     <td width="50%" valign="top">
       <a href="https://thewizardnexus.github.io/Scamurai/">
-        <img src="https://thewizardnexus.github.io/Scamurai/public/og.png" width="100%" alt="Scamurai &mdash; detect deception and defend the human">
+        <img src="https://thewizardnexus.github.io/Scamurai/public/og.png?v=9106d9fa" width="100%" alt="Scamurai &mdash; detect deception and defend the human">
       </a>
       <h3><a href="https://thewizardnexus.github.io/Scamurai/">Scamurai</a></h3>
       <p><strong>Pre-release.</strong> A human-centered scam and abuse defense foundation built around evidence, explanation, consent, and agency.</p>
