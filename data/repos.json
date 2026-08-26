@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T15:01:34.415Z",
+  "generatedAt": "2026-08-26T07:28:31.105Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -40,7 +40,47 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-08-25T14:10:31Z"
+      "updatedAt": "2026-08-26T04:23:29Z"
+    },
+    {
+      "name": "Mystics-and-Minds",
+      "fullName": "TheWizardNexus/Mystics-and-Minds",
+      "description": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
+      "explanation": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
+      "url": "https://github.com/TheWizardNexus/Mystics-and-Minds",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-08-24T15:56:08Z",
+      "updatedAt": "2026-08-26T00:22:56Z"
+    },
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-08-25T15:20:33Z"
     },
     {
       "name": "Zen-Sentry-Foundation",
@@ -70,26 +110,6 @@
       "updatedAt": "2026-08-25T13:52:43Z"
     },
     {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
-      "language": "JavaScript",
-      "stars": 1,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 1,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-25T07:28:18Z"
-    },
-    {
       "name": "TheWizardNexus.com",
       "fullName": "TheWizardNexus/TheWizardNexus.com",
       "description": "The public facing website",
@@ -108,26 +128,6 @@
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
       "updatedAt": "2026-08-25T07:26:11Z"
-    },
-    {
-      "name": "Mystics-and-Minds",
-      "fullName": "TheWizardNexus/Mystics-and-Minds",
-      "description": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
-      "explanation": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
-      "url": "https://github.com/TheWizardNexus/Mystics-and-Minds",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 0,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-08-24T15:56:08Z",
-      "updatedAt": "2026-08-25T04:38:17Z"
     },
     {
       "name": "DBOPFS",
