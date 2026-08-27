@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T07:28:31.105Z",
+  "generatedAt": "2026-08-27T17:52:08.144Z",
   "maintainer": "thewizardnexus",
   "source": {
     "referenceProvider": "npm-stat.com",
-    "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-08-24",
-    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-08-25",
+    "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-08-26",
+    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-08-26",
     "referenceRole": "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
     "authority": "Official npm download-count range API; sole authority for every published daily value and total.",
     "authorityDocumentation": "https://github.com/npm/registry/blob/main/docs/download-counts.md",
@@ -13,16 +13,16 @@
       "https://api.npmjs.org/downloads/range/last-day/dbopfs"
     ],
     "officialUrls": [
-      "https://api.npmjs.org/downloads/range/2026-01-01:2026-08-24/dbopfs"
+      "https://api.npmjs.org/downloads/range/2026-01-01:2026-08-26/dbopfs"
     ],
     "semantics": "Successful package-tarball downloads, not unique people or verified installations.",
     "freshness": "The available-until date follows npm's official range/last-day endpoint, capped at the completed UTC day."
   },
   "period": {
     "requestedFrom": "2026-01-01",
-    "requestedUntil": "2026-08-25",
+    "requestedUntil": "2026-08-26",
     "availableFrom": "2026-01-01",
-    "availableUntil": "2026-08-24"
+    "availableUntil": "2026-08-26"
   },
   "packageCount": 1,
   "dates": [
@@ -261,7 +261,9 @@
     "2026-08-21",
     "2026-08-22",
     "2026-08-23",
-    "2026-08-24"
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26"
   ],
   "overall": [
     0,
@@ -499,12 +501,14 @@
     1,
     0,
     0,
-    2
+    2,
+    1,
+    0
   ],
-  "total": 143,
+  "total": 144,
   "dataQuality": {
-    "officialTotal": 143,
-    "npmStatReferenceTotal": 143,
+    "officialTotal": 144,
+    "npmStatReferenceTotal": 144,
     "officialMinusNpmStat": 0,
     "publishedTotalSource": "official npm range series",
     "correctedPointCount": 0,
@@ -524,7 +528,7 @@
   "packages": [
     {
       "name": "dbopfs",
-      "total": 143,
+      "total": 144,
       "downloads": [
         0,
         0,
@@ -761,7 +765,9 @@
         1,
         0,
         0,
-        2
+        2,
+        1,
+        0
       ]
     }
   ]
