@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T17:52:08.144Z",
+  "generatedAt": "2026-08-28T18:57:41.080Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -23,26 +23,6 @@
   },
   "repositories": [
     {
-      "name": "arcane-os-sdk",
-      "fullName": "TheWizardNexus/arcane-os-sdk",
-      "description": "sdk for building apps for Acane OS",
-      "explanation": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
-      "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
-      "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 0,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "AGPL-3.0",
-      "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-08-27T17:31:40Z"
-    },
-    {
       "name": "TheWizardNexus.com",
       "fullName": "TheWizardNexus/TheWizardNexus.com",
       "description": "The public facing website",
@@ -60,7 +40,27 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-08-26T07:30:13Z"
+      "updatedAt": "2026-08-28T18:56:41Z"
+    },
+    {
+      "name": "arcane-os-sdk",
+      "fullName": "TheWizardNexus/arcane-os-sdk",
+      "description": "sdk for building apps for Acane OS",
+      "explanation": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
+      "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
+      "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "AGPL-3.0",
+      "createdAt": "2026-08-13T23:55:03Z",
+      "updatedAt": "2026-08-28T05:38:18Z"
     },
     {
       "name": "TheWizardNexus",
@@ -80,7 +80,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-26T07:28:42Z"
+      "updatedAt": "2026-08-27T18:10:43Z"
     },
     {
       "name": "Mystics-and-Minds",
