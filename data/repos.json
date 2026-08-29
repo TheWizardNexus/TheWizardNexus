@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T18:57:41.080Z",
+  "generatedAt": "2026-08-29T12:48:46.474Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -15,8 +15,8 @@
     "following": 0
   },
   "counts": {
-    "total": 8,
-    "original": 8,
+    "total": 7,
+    "original": 7,
     "forks": 0,
     "archived": 0,
     "stars": 2
@@ -40,7 +40,27 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-08-28T18:56:41Z"
+      "updatedAt": "2026-08-29T12:48:29Z"
+    },
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-08-28T18:57:49Z"
     },
     {
       "name": "arcane-os-sdk",
@@ -61,46 +81,6 @@
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
       "updatedAt": "2026-08-28T05:38:18Z"
-    },
-    {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
-      "language": "JavaScript",
-      "stars": 1,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 1,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-27T18:10:43Z"
-    },
-    {
-      "name": "Mystics-and-Minds",
-      "fullName": "TheWizardNexus/Mystics-and-Minds",
-      "description": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
-      "explanation": "Mystics & Minds explores the intersection of behavioral health and mystical experience, where clinical insight meets spiritual wisdom and cultural storytelling becomes a bridge for healing. Reflections on trauma, intuition, UAP, myth, pop culture, consciousness, resilience, and the many ways we make meaning of the unseen.",
-      "url": "https://github.com/TheWizardNexus/Mystics-and-Minds",
-      "homepage": null,
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 0,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-08-24T15:56:08Z",
-      "updatedAt": "2026-08-26T00:22:56Z"
     },
     {
       "name": "Zen-Sentry-Foundation",

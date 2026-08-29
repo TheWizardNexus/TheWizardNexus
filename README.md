@@ -20,8 +20,8 @@
 
 <!-- profile-telemetry-counts:start -->
 <p align="center">
-  <strong>13 published project sites · 78 mapped ecosystem points · 171 relationships · 8 public repositories</strong><br>
-  <sub><strong>144 official npm range downloads</strong> from January 1, 2026 through August 27, 2026 · npm-stat is an optional comparison only</sub><br>
+  <strong>13 published project sites · 78 mapped ecosystem points · 171 relationships · 7 public repositories</strong><br>
+  <sub><strong>145 official npm range downloads</strong> from January 1, 2026 through August 28, 2026 · npm-stat is an optional comparison only</sub><br>
   <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
 </p>
 <!-- profile-telemetry-counts:end -->
