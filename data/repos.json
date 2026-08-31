@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T12:10:07.710Z",
+  "generatedAt": "2026-08-31T14:20:38.537Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -23,6 +23,26 @@
   },
   "repositories": [
     {
+      "name": "arcane-os-sdk",
+      "fullName": "TheWizardNexus/arcane-os-sdk",
+      "description": "sdk for building apps for Acane OS",
+      "explanation": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
+      "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
+      "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": "AGPL-3.0",
+      "createdAt": "2026-08-13T23:55:03Z",
+      "updatedAt": "2026-08-31T04:23:55Z"
+    },
+    {
       "name": "TheWizardNexus.com",
       "fullName": "TheWizardNexus/TheWizardNexus.com",
       "description": "The public facing website",
@@ -40,47 +60,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-08-30T12:08:38Z"
-    },
-    {
-      "name": "arcane-os-sdk",
-      "fullName": "TheWizardNexus/arcane-os-sdk",
-      "description": "sdk for building apps for Acane OS",
-      "explanation": "A standalone SDK and CLI for building, testing, packaging, and managing Arcane applications inside or outside ARCANE OS.",
-      "url": "https://github.com/TheWizardNexus/arcane-os-sdk",
-      "homepage": "https://thewizardnexus.github.io/arcane-os-sdk/",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 1,
-      "openIssues": 0,
-      "watchers": 0,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": "AGPL-3.0",
-      "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-08-30T06:13:45Z"
-    },
-    {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
-      "language": "JavaScript",
-      "stars": 1,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 1,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-08-29T12:48:57Z"
+      "updatedAt": "2026-08-30T23:42:55Z"
     },
     {
       "name": "Zen-Sentry-Foundation",
@@ -107,7 +87,27 @@
       ],
       "license": null,
       "createdAt": "2026-08-24T17:06:34Z",
-      "updatedAt": "2026-08-25T13:52:43Z"
+      "updatedAt": "2026-08-30T23:24:23Z"
+    },
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-08-30T12:10:18Z"
     },
     {
       "name": "DBOPFS",
