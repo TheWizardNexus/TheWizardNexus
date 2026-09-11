@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-10T11:43:45.376Z",
+  "generatedAt": "2026-09-11T11:44:21.122Z",
   "maintainer": "thewizardnexus",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
@@ -17,24 +17,24 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-08-31",
-      "end": "2026-09-06"
+      "start": "2026-09-03",
+      "end": "2026-09-09"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-08-08",
-      "end": "2026-09-06"
+      "start": "2026-08-11",
+      "end": "2026-09-09"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-09-07",
-      "end": "2026-09-06"
+      "start": "2025-09-10",
+      "end": "2026-09-09"
     }
   },
   "totals": {
-    "week": 5,
-    "month": 152,
-    "year": 152
+    "week": 1,
+    "month": 153,
+    "year": 153
   },
   "packages": [
     {
@@ -61,24 +61,12 @@
         "homepage": "https://thewizardnexus.github.io/DBOPFS/"
       },
       "downloads": {
-        "week": 5,
-        "month": 152,
-        "year": 152
+        "week": 1,
+        "month": 153,
+        "year": 153
       },
       "series": {
         "week": [
-          {
-            "day": "2026-08-31",
-            "downloads": 3
-          },
-          {
-            "day": "2026-09-01",
-            "downloads": 0
-          },
-          {
-            "day": "2026-09-02",
-            "downloads": 2
-          },
           {
             "day": "2026-09-03",
             "downloads": 0
@@ -94,21 +82,21 @@
           {
             "day": "2026-09-06",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-07",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-08",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-09",
+            "downloads": 1
           }
         ],
         "month": [
-          {
-            "day": "2026-08-08",
-            "downloads": 0
-          },
-          {
-            "day": "2026-08-09",
-            "downloads": 0
-          },
-          {
-            "day": "2026-08-10",
-            "downloads": 0
-          },
           {
             "day": "2026-08-11",
             "downloads": 102
@@ -216,21 +204,21 @@
           {
             "day": "2026-09-06",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-07",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-08",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-09",
+            "downloads": 1
           }
         ],
         "year": [
-          {
-            "day": "2025-09-07",
-            "downloads": 0
-          },
-          {
-            "day": "2025-09-08",
-            "downloads": 0
-          },
-          {
-            "day": "2025-09-09",
-            "downloads": 0
-          },
           {
             "day": "2025-09-10",
             "downloads": 0
@@ -1678,6 +1666,18 @@
           {
             "day": "2026-09-06",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-07",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-08",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-09",
+            "downloads": 1
           }
         ]
       }
