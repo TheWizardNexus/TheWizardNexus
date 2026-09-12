@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-11T11:44:21.122Z",
+  "generatedAt": "2026-09-12T11:11:23.226Z",
   "maintainer": "thewizardnexus",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
@@ -17,23 +17,23 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-09-03",
-      "end": "2026-09-09"
+      "start": "2026-09-04",
+      "end": "2026-09-10"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-08-11",
-      "end": "2026-09-09"
+      "start": "2026-08-12",
+      "end": "2026-09-10"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-09-10",
-      "end": "2026-09-09"
+      "start": "2025-09-11",
+      "end": "2026-09-10"
     }
   },
   "totals": {
     "week": 1,
-    "month": 153,
+    "month": 51,
     "year": 153
   },
   "packages": [
@@ -62,15 +62,11 @@
       },
       "downloads": {
         "week": 1,
-        "month": 153,
+        "month": 51,
         "year": 153
       },
       "series": {
         "week": [
-          {
-            "day": "2026-09-03",
-            "downloads": 0
-          },
           {
             "day": "2026-09-04",
             "downloads": 0
@@ -94,13 +90,13 @@
           {
             "day": "2026-09-09",
             "downloads": 1
+          },
+          {
+            "day": "2026-09-10",
+            "downloads": 0
           }
         ],
         "month": [
-          {
-            "day": "2026-08-11",
-            "downloads": 102
-          },
           {
             "day": "2026-08-12",
             "downloads": 20
@@ -216,13 +212,13 @@
           {
             "day": "2026-09-09",
             "downloads": 1
+          },
+          {
+            "day": "2026-09-10",
+            "downloads": 0
           }
         ],
         "year": [
-          {
-            "day": "2025-09-10",
-            "downloads": 0
-          },
           {
             "day": "2025-09-11",
             "downloads": 0
@@ -1678,6 +1674,10 @@
           {
             "day": "2026-09-09",
             "downloads": 1
+          },
+          {
+            "day": "2026-09-10",
+            "downloads": 0
           }
         ]
       }

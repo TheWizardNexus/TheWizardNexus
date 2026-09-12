@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T11:44:21.122Z",
+  "generatedAt": "2026-09-12T11:11:23.226Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -40,7 +40,27 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-09-11T11:41:17Z"
+      "updatedAt": "2026-09-12T11:06:13Z"
+    },
+    {
+      "name": "TheWizardNexus",
+      "fullName": "TheWizardNexus/TheWizardNexus",
+      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
+      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
+      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
+      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 1,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-07-13T18:33:00Z",
+      "updatedAt": "2026-09-11T11:44:28Z"
     },
     {
       "name": "arcane-os-sdk",
@@ -148,26 +168,6 @@
       "license": null,
       "createdAt": "2026-08-13T23:20:42Z",
       "updatedAt": "2026-09-10T14:27:05Z"
-    },
-    {
-      "name": "TheWizardNexus",
-      "fullName": "TheWizardNexus/TheWizardNexus",
-      "description": "GitHub profile for The Wizard Nexus — behavioral health innovation powered by PreCrisis AI.",
-      "explanation": "The public profile, ecosystem directory, verified telemetry, and project atlas for The Wizard Nexus.",
-      "url": "https://github.com/TheWizardNexus/TheWizardNexus",
-      "homepage": "https://thewizardnexus.github.io/TheWizardNexus/",
-      "language": "JavaScript",
-      "stars": 1,
-      "forks": 0,
-      "openIssues": 0,
-      "watchers": 1,
-      "archived": false,
-      "disabled": false,
-      "fork": false,
-      "topics": [],
-      "license": null,
-      "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-09-10T11:43:58Z"
     }
   ]
 }
