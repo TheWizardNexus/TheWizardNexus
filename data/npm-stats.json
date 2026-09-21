@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-20T11:44:47.815Z",
+  "generatedAt": "2026-09-21T13:14:41.948Z",
   "maintainer": "thewizardnexus",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
@@ -17,23 +17,23 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-09-13",
-      "end": "2026-09-19"
+      "start": "2026-09-14",
+      "end": "2026-09-20"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-08-21",
-      "end": "2026-09-19"
+      "start": "2026-08-22",
+      "end": "2026-09-20"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-09-20",
-      "end": "2026-09-19"
+      "start": "2025-09-21",
+      "end": "2026-09-20"
     }
   },
   "totals": {
     "week": 0,
-    "month": 15,
+    "month": 14,
     "year": 155
   },
   "packages": [
@@ -62,15 +62,11 @@
       },
       "downloads": {
         "week": 0,
-        "month": 15,
+        "month": 14,
         "year": 155
       },
       "series": {
         "week": [
-          {
-            "day": "2026-09-13",
-            "downloads": 0
-          },
           {
             "day": "2026-09-14",
             "downloads": 0
@@ -94,13 +90,13 @@
           {
             "day": "2026-09-19",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-20",
+            "downloads": 0
           }
         ],
         "month": [
-          {
-            "day": "2026-08-21",
-            "downloads": 1
-          },
           {
             "day": "2026-08-22",
             "downloads": 0
@@ -216,13 +212,13 @@
           {
             "day": "2026-09-19",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-20",
+            "downloads": 0
           }
         ],
         "year": [
-          {
-            "day": "2025-09-20",
-            "downloads": 0
-          },
           {
             "day": "2025-09-21",
             "downloads": 0
@@ -1677,6 +1673,10 @@
           },
           {
             "day": "2026-09-19",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-20",
             "downloads": 0
           }
         ]
