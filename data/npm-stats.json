@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-22T11:59:54.612Z",
+  "generatedAt": "2026-09-23T12:01:30.791Z",
   "maintainer": "thewizardnexus",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
@@ -17,18 +17,18 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-09-14",
-      "end": "2026-09-20"
+      "start": "2026-09-15",
+      "end": "2026-09-21"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-08-22",
-      "end": "2026-09-20"
+      "start": "2026-08-23",
+      "end": "2026-09-21"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-09-21",
-      "end": "2026-09-20"
+      "start": "2025-09-22",
+      "end": "2026-09-21"
     }
   },
   "totals": {
@@ -68,10 +68,6 @@
       "series": {
         "week": [
           {
-            "day": "2026-09-14",
-            "downloads": 0
-          },
-          {
             "day": "2026-09-15",
             "downloads": 0
           },
@@ -94,13 +90,13 @@
           {
             "day": "2026-09-20",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-21",
+            "downloads": 0
           }
         ],
         "month": [
-          {
-            "day": "2026-08-22",
-            "downloads": 0
-          },
           {
             "day": "2026-08-23",
             "downloads": 0
@@ -216,13 +212,13 @@
           {
             "day": "2026-09-20",
             "downloads": 0
+          },
+          {
+            "day": "2026-09-21",
+            "downloads": 0
           }
         ],
         "year": [
-          {
-            "day": "2025-09-21",
-            "downloads": 0
-          },
           {
             "day": "2025-09-22",
             "downloads": 0
@@ -1677,6 +1673,10 @@
           },
           {
             "day": "2026-09-20",
+            "downloads": 0
+          },
+          {
+            "day": "2026-09-21",
             "downloads": 0
           }
         ]

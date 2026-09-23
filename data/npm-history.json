@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-22T11:59:54.612Z",
+  "generatedAt": "2026-09-23T12:01:30.791Z",
   "maintainer": "thewizardnexus",
   "source": {
     "referenceProvider": "npm-stat.com",
-    "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-09-20",
-    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-09-21",
+    "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-09-21",
+    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-09-22",
     "referenceRole": "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
     "authority": "Official npm download-count range API; sole authority for every published daily value and total.",
     "authorityDocumentation": "https://github.com/npm/registry/blob/main/docs/download-counts.md",
@@ -13,16 +13,16 @@
       "https://api.npmjs.org/downloads/range/last-day/dbopfs"
     ],
     "officialUrls": [
-      "https://api.npmjs.org/downloads/range/2026-01-01:2026-09-20/dbopfs"
+      "https://api.npmjs.org/downloads/range/2026-01-01:2026-09-21/dbopfs"
     ],
     "semantics": "Successful package-tarball downloads, not unique people or verified installations.",
     "freshness": "The available-until date follows npm's official range/last-day endpoint, capped at the completed UTC day."
   },
   "period": {
     "requestedFrom": "2026-01-01",
-    "requestedUntil": "2026-09-21",
+    "requestedUntil": "2026-09-22",
     "availableFrom": "2026-01-01",
-    "availableUntil": "2026-09-20"
+    "availableUntil": "2026-09-21"
   },
   "packageCount": 1,
   "dates": [
@@ -288,7 +288,8 @@
     "2026-09-17",
     "2026-09-18",
     "2026-09-19",
-    "2026-09-20"
+    "2026-09-20",
+    "2026-09-21"
   ],
   "overall": [
     0,
@@ -546,6 +547,7 @@
     0,
     0,
     2,
+    0,
     0,
     0,
     0,
@@ -835,6 +837,7 @@
         0,
         0,
         2,
+        0,
         0,
         0,
         0,
