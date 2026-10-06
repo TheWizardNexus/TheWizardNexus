@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T15:11:49.207Z",
+  "generatedAt": "2026-10-06T13:32:53.873Z",
   "source": {
     "profile": "https://api.github.com/users/TheWizardNexus",
     "repositories": "https://api.github.com/users/TheWizardNexus/repos?per_page=100&type=owner"
@@ -15,8 +15,8 @@
     "following": 0
   },
   "counts": {
-    "total": 7,
-    "original": 7,
+    "total": 10,
+    "original": 10,
     "forks": 0,
     "archived": 0,
     "stars": 4
@@ -40,7 +40,27 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-08-24T15:14:01Z",
-      "updatedAt": "2026-10-05T15:07:30Z"
+      "updatedAt": "2026-10-06T13:30:37Z"
+    },
+    {
+      "name": "Arcane-PM",
+      "fullName": "TheWizardNexus/Arcane-PM",
+      "description": "A Customizeable Project Manager Agent for Codex Projects to help make engineering with AI more human",
+      "explanation": "A Customizeable Project Manager Agent for Codex Projects to help make engineering with AI more human",
+      "url": "https://github.com/TheWizardNexus/Arcane-PM",
+      "homepage": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-10-06T03:27:15Z",
+      "updatedAt": "2026-10-06T12:47:31Z"
     },
     {
       "name": "arcane-os-sdk",
@@ -60,7 +80,47 @@
       "topics": [],
       "license": "AGPL-3.0",
       "createdAt": "2026-08-13T23:55:03Z",
-      "updatedAt": "2026-10-05T14:30:20Z"
+      "updatedAt": "2026-10-06T11:35:35Z"
+    },
+    {
+      "name": "SpellWire-Public-Message-Repo",
+      "fullName": "TheWizardNexus/SpellWire-Public-Message-Repo",
+      "description": "TWiN public SpellWire Message Repo",
+      "explanation": "TWiN public SpellWire Message Repo",
+      "url": "https://github.com/TheWizardNexus/SpellWire-Public-Message-Repo",
+      "homepage": null,
+      "language": "Unclassified",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-10-06T05:22:00Z",
+      "updatedAt": "2026-10-06T08:21:13Z"
+    },
+    {
+      "name": "KEMPO-Public-Scores",
+      "fullName": "TheWizardNexus/KEMPO-Public-Scores",
+      "description": "Public Scores for Models That Have Completed the KEMPO Morals and Ethics assessment exam ",
+      "explanation": "Public Scores for Models That Have Completed the KEMPO Morals and Ethics assessment exam",
+      "url": "https://github.com/TheWizardNexus/KEMPO-Public-Scores",
+      "homepage": null,
+      "language": "Unclassified",
+      "stars": 0,
+      "forks": 0,
+      "openIssues": 0,
+      "watchers": 0,
+      "archived": false,
+      "disabled": false,
+      "fork": false,
+      "topics": [],
+      "license": null,
+      "createdAt": "2026-10-06T05:45:12Z",
+      "updatedAt": "2026-10-06T07:12:02Z"
     },
     {
       "name": "TheWizardNexus",
@@ -80,7 +140,7 @@
       "topics": [],
       "license": null,
       "createdAt": "2026-07-13T18:33:00Z",
-      "updatedAt": "2026-10-04T12:48:19Z"
+      "updatedAt": "2026-10-05T15:12:05Z"
     },
     {
       "name": "DBOPFS",
