@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-19T07:08:54.269Z",
+  "generatedAt": "2026-10-20T06:55:25.975Z",
   "maintainer": "thewizardnexus",
   "source": {
     "referenceProvider": "npm-stat.com",
-    "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-10-16",
-    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-10-18",
+    "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-10-18",
+    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-10-19",
     "referenceRole": "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
     "authority": "Official npm download-count range API; sole authority for every published daily value and total.",
     "authorityDocumentation": "https://github.com/npm/registry/blob/main/docs/download-counts.md",
@@ -13,16 +13,16 @@
       "https://api.npmjs.org/downloads/range/last-day/dbopfs"
     ],
     "officialUrls": [
-      "https://api.npmjs.org/downloads/range/2026-01-01:2026-10-16/dbopfs"
+      "https://api.npmjs.org/downloads/range/2026-01-01:2026-10-18/dbopfs"
     ],
     "semantics": "Successful package-tarball downloads, not unique people or verified installations.",
     "freshness": "The available-until date follows npm's official range/last-day endpoint, capped at the completed UTC day."
   },
   "period": {
     "requestedFrom": "2026-01-01",
-    "requestedUntil": "2026-10-18",
+    "requestedUntil": "2026-10-19",
     "availableFrom": "2026-01-01",
-    "availableUntil": "2026-10-16"
+    "availableUntil": "2026-10-18"
   },
   "packageCount": 1,
   "dates": [
@@ -314,7 +314,9 @@
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18"
   ],
   "overall": [
     0,
@@ -605,7 +607,9 @@
     0,
     0,
     0,
-    1
+    1,
+    0,
+    0
   ],
   "total": 165,
   "dataQuality": {
@@ -614,7 +618,7 @@
     "officialMinusNpmStat": 3,
     "publishedTotalSource": "official npm range series",
     "correctedPointCount": 1,
-    "referenceMissingPointCount": 0,
+    "referenceMissingPointCount": 5,
     "referenceAvailable": true,
     "exactMatch": false,
     "status": "official range series published unchanged; optional npm-stat comparison differs"
@@ -920,7 +924,9 @@
         0,
         0,
         0,
-        1
+        1,
+        0,
+        0
       ]
     }
   ]
