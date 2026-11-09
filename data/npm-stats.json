@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-08T06:37:58.364Z",
+  "generatedAt": "2026-11-09T06:47:53.377Z",
   "maintainer": "thewizardnexus",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
@@ -17,24 +17,24 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-11-01",
-      "end": "2026-11-07"
+      "start": "2026-11-02",
+      "end": "2026-11-08"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-10-09",
-      "end": "2026-11-07"
+      "start": "2026-10-10",
+      "end": "2026-11-08"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-11-08",
-      "end": "2026-11-07"
+      "start": "2025-11-09",
+      "end": "2026-11-08"
     }
   },
   "totals": {
-    "week": 3,
-    "month": 9,
-    "year": 181
+    "week": 4,
+    "month": 11,
+    "year": 183
   },
   "packages": [
     {
@@ -61,16 +61,12 @@
         "homepage": "https://thewizardnexus.github.io/DBOPFS/"
       },
       "downloads": {
-        "week": 3,
-        "month": 9,
-        "year": 181
+        "week": 4,
+        "month": 11,
+        "year": 183
       },
       "series": {
         "week": [
-          {
-            "day": "2026-11-01",
-            "downloads": 1
-          },
           {
             "day": "2026-11-02",
             "downloads": 0
@@ -94,13 +90,13 @@
           {
             "day": "2026-11-07",
             "downloads": 0
+          },
+          {
+            "day": "2026-11-08",
+            "downloads": 2
           }
         ],
         "month": [
-          {
-            "day": "2026-10-09",
-            "downloads": 0
-          },
           {
             "day": "2026-10-10",
             "downloads": 0
@@ -216,13 +212,13 @@
           {
             "day": "2026-11-07",
             "downloads": 0
+          },
+          {
+            "day": "2026-11-08",
+            "downloads": 2
           }
         ],
         "year": [
-          {
-            "day": "2025-11-08",
-            "downloads": 0
-          },
           {
             "day": "2025-11-09",
             "downloads": 0
@@ -1678,6 +1674,10 @@
           {
             "day": "2026-11-07",
             "downloads": 0
+          },
+          {
+            "day": "2026-11-08",
+            "downloads": 2
           }
         ]
       }
