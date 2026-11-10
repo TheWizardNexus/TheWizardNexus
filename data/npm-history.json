@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T06:47:53.377Z",
+  "generatedAt": "2026-11-10T06:40:28.549Z",
   "maintainer": "thewizardnexus",
   "source": {
     "referenceProvider": "npm-stat.com",
     "referenceUrl": "https://npm-stat.com/api/download-counts?author=thewizardnexus&from=2026-01-01&until=2026-11-08",
-    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-11-08",
+    "referenceView": "https://npm-stat.com/charts.html?author=thewizardnexus&from=2026-01-01&to=2026-11-09",
     "referenceRole": "Optional, non-authoritative comparison only; never used to set or adjust published counts.",
     "authority": "Official npm download-count range API; sole authority for every published daily value and total.",
     "authorityDocumentation": "https://github.com/npm/registry/blob/main/docs/download-counts.md",
@@ -20,7 +20,7 @@
   },
   "period": {
     "requestedFrom": "2026-01-01",
-    "requestedUntil": "2026-11-08",
+    "requestedUntil": "2026-11-09",
     "availableFrom": "2026-01-01",
     "availableUntil": "2026-11-08"
   },
@@ -633,7 +633,7 @@
     0,
     0,
     0,
-    0,
+    2,
     0,
     0,
     1,
@@ -653,13 +653,13 @@
     0,
     2
   ],
-  "total": 183,
+  "total": 185,
   "dataQuality": {
-    "officialTotal": 183,
+    "officialTotal": 185,
     "npmStatReferenceTotal": 170,
-    "officialMinusNpmStat": 13,
+    "officialMinusNpmStat": 15,
     "publishedTotalSource": "official npm range series",
-    "correctedPointCount": 4,
+    "correctedPointCount": 5,
     "referenceMissingPointCount": 0,
     "referenceAvailable": true,
     "exactMatch": false,
@@ -676,7 +676,7 @@
   "packages": [
     {
       "name": "dbopfs",
-      "total": 183,
+      "total": 185,
       "downloads": [
         0,
         0,
@@ -971,7 +971,7 @@
         0,
         0,
         0,
-        0,
+        2,
         0,
         0,
         1,
