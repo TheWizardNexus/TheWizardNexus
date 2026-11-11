@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T06:40:28.549Z",
+  "generatedAt": "2026-11-11T06:41:02.361Z",
   "maintainer": "thewizardnexus",
   "source": {
     "registry": "https://registry.npmjs.org/-/v1/search?text=maintainer%3Athewizardnexus&size=250",
@@ -17,18 +17,18 @@
   "periods": {
     "week": {
       "label": "Weekly",
-      "start": "2026-11-02",
-      "end": "2026-11-08"
+      "start": "2026-11-03",
+      "end": "2026-11-09"
     },
     "month": {
       "label": "Monthly",
-      "start": "2026-10-10",
-      "end": "2026-11-08"
+      "start": "2026-10-11",
+      "end": "2026-11-09"
     },
     "year": {
       "label": "Yearly",
-      "start": "2025-11-09",
-      "end": "2026-11-08"
+      "start": "2025-11-10",
+      "end": "2026-11-09"
     }
   },
   "totals": {
@@ -68,10 +68,6 @@
       "series": {
         "week": [
           {
-            "day": "2026-11-02",
-            "downloads": 0
-          },
-          {
             "day": "2026-11-03",
             "downloads": 0
           },
@@ -94,13 +90,13 @@
           {
             "day": "2026-11-08",
             "downloads": 2
+          },
+          {
+            "day": "2026-11-09",
+            "downloads": 0
           }
         ],
         "month": [
-          {
-            "day": "2026-10-10",
-            "downloads": 0
-          },
           {
             "day": "2026-10-11",
             "downloads": 0
@@ -216,13 +212,13 @@
           {
             "day": "2026-11-08",
             "downloads": 2
+          },
+          {
+            "day": "2026-11-09",
+            "downloads": 0
           }
         ],
         "year": [
-          {
-            "day": "2025-11-09",
-            "downloads": 0
-          },
           {
             "day": "2025-11-10",
             "downloads": 0
@@ -1678,6 +1674,10 @@
           {
             "day": "2026-11-08",
             "downloads": 2
+          },
+          {
+            "day": "2026-11-09",
+            "downloads": 0
           }
         ]
       }
