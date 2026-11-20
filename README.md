@@ -170,11 +170,69 @@ Every published TWiN GitHub Pages site is included below, including public sites
       <p><a href="https://thewizardnexus.github.io/Redress/"><strong>Explore Redress &rarr;</strong></a></p>
     </td>
   </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Mystics-and-Minds/">
+        <img src="https://thewizardnexus.github.io/Mystics-and-Minds/assets/mystics-minds-banner.png" width="100%" alt="Mystics and Minds — following the threads of human experience">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Mystics-and-Minds/">Mystics &amp; Minds</a></h3>
+      <p><strong>Public site; private repository.</strong> Monthly reflections drawing on behavioral health, mythology, personal experience, and cultural stories to explore how people make meaning.</p>
+      <p><a href="https://thewizardnexus.github.io/Mystics-and-Minds/"><strong>Read the reflections &rarr;</strong></a></p>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/TheWizardNexus.com/">
+        <img src="https://thewizardnexus.github.io/TheWizardNexus.com/assets/wizard-nexus-social-preview-original.png?v=20260830c" width="100%" alt="The Wizard Nexus — many roads, one mission">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/TheWizardNexus.com/">TheWizardNexus.com</a></h3>
+      <p><strong>Public site and repository.</strong> The TWiN website brings responsible AI, behavioral-health expertise, and human-centered technology together across disciplines.</p>
+      <p><a href="https://thewizardnexus.github.io/TheWizardNexus.com/"><strong>Explore the website &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/TheWizardNexus.com">View public repository</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://thewizardnexus.github.io/Zen-Sentry-Foundation/">
+        <img src="https://thewizardnexus.github.io/Zen-Sentry-Foundation/assets/zen-sentry-foundation-readme-header.png" width="100%" alt="Zen Sentry Foundation — earlier support through human connection">
+      </a>
+      <h3><a href="https://thewizardnexus.github.io/Zen-Sentry-Foundation/">Zen Sentry Foundation</a></h3>
+      <p><strong>Public site and repository.</strong> A nonprofit focused on early awareness, resilience education, and practical resources for Veterans, first responders, high-trust professionals, and families.</p>
+      <p><a href="https://thewizardnexus.github.io/Zen-Sentry-Foundation/"><strong>Explore the foundation &rarr;</strong></a> &middot; <a href="https://github.com/TheWizardNexus/Zen-Sentry-Foundation">View public repository</a></p>
+    </td>
+  </tr>
 </table>
 
-**Publishing next:** PreCrisis, SDE, and Warrior Spirit Companion are in development or planning and do not yet have public sites. They will be linked here only after their first public deployments are live.
+### Awaiting public sites
 
-All public TWiN project repositories are represented above. [View this profile's public repository &rarr;](https://github.com/TheWizardNexus/TheWizardNexus)
+GitHub Pages is configured for the following repositories. These addresses returned **404** in the November 19, 2026 review. This describes their website addresses, not the availability of their applications or services.
+
+| Project | Configured Pages address — currently unavailable |
+| --- | --- |
+| Arcane-PM | [Pages address](https://thewizardnexus.github.io/Arcane-PM/) |
+| BOSS | [Pages address](https://thewizardnexus.github.io/BOSS/) |
+| PreCrisis | [Pages address](https://thewizardnexus.github.io/PreCrisis/) |
+| SDE | [Pages address](https://thewizardnexus.github.io/SDE/) |
+| Stripe-Server | [Pages address](https://thewizardnexus.github.io/Stripe-Server/) |
+| TWiN-Server | [Pages address](https://thewizardnexus.github.io/TWiN-Server/) |
+| VECTOR | [Pages address](https://thewizardnexus.github.io/VECTOR/) |
+| Warrior Spirit Companion | [Pages address](https://thewizardnexus.github.io/Warrior-Spirit-Companion/) |
+
+## Public repositories
+
+Every public TWiN repository is listed here, including repositories without a live site. This list refreshes with the [public code directory](https://thewizardnexus.github.io/TheWizardNexus/code.html).
+
+<!-- profile-public-repositories:start -->
+<ul>
+  <li><a href="https://github.com/TheWizardNexus/arcane-os-sdk">arcane-os-sdk</a></li>
+  <li><a href="https://github.com/TheWizardNexus/Arcane-PM">Arcane-PM</a></li>
+  <li><a href="https://github.com/TheWizardNexus/Astrolabe">Astrolabe</a></li>
+  <li><a href="https://github.com/TheWizardNexus/DBOPFS">DBOPFS</a></li>
+  <li><a href="https://github.com/TheWizardNexus/DBOPFS-Studio">DBOPFS-Studio</a></li>
+  <li><a href="https://github.com/TheWizardNexus/KEMPO-Public-Scores">KEMPO-Public-Scores</a></li>
+  <li><a href="https://github.com/TheWizardNexus/SpellWire-Public-Message-Repo">SpellWire-Public-Message-Repo</a></li>
+  <li><a href="https://github.com/TheWizardNexus/TheWizardNexus">TheWizardNexus</a></li>
+  <li><a href="https://github.com/TheWizardNexus/TheWizardNexus.com">TheWizardNexus.com</a></li>
+  <li><a href="https://github.com/TheWizardNexus/Zen-Sentry-Foundation">Zen-Sentry-Foundation</a></li>
+</ul>
+<!-- profile-public-repositories:end -->
 
 ## What we do
 

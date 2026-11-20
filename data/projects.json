@@ -213,24 +213,104 @@
       "sourceBoundary": "Private repository",
       "featured": false,
       "accent": "gold"
+    },
+    {
+      "slug": "mystics-and-minds",
+      "name": "Mystics & Minds",
+      "category": "Stories & reflection",
+      "stage": "Public site",
+      "maturity": "Public site",
+      "description": "Monthly reflections drawing on behavioral health, mythology, personal experience, and cultural stories to explore how people make meaning.",
+      "url": "https://thewizardnexus.github.io/Mystics-and-Minds/",
+      "repositoryUrl": null,
+      "image": "https://thewizardnexus.github.io/Mystics-and-Minds/assets/mystics-minds-banner.png",
+      "sourceStatus": "Public site",
+      "sourceBoundary": "Private repository",
+      "featured": false,
+      "accent": "violet"
+    },
+    {
+      "slug": "thewizardnexus-com",
+      "name": "TheWizardNexus.com",
+      "category": "TWiN organization",
+      "stage": "Public site",
+      "maturity": "Public site",
+      "description": "The TWiN website brings responsible AI, behavioral-health expertise, and human-centered technology together across disciplines.",
+      "url": "https://thewizardnexus.github.io/TheWizardNexus.com/",
+      "repositoryUrl": "https://github.com/TheWizardNexus/TheWizardNexus.com",
+      "image": "https://thewizardnexus.github.io/TheWizardNexus.com/assets/wizard-nexus-social-preview-original.png?v=20260830c",
+      "sourceStatus": "Public repository",
+      "sourceBoundary": "Public repository",
+      "featured": false,
+      "accent": "blue"
+    },
+    {
+      "slug": "zen-sentry-foundation",
+      "name": "Zen Sentry Foundation",
+      "category": "Community support",
+      "stage": "Public site",
+      "maturity": "Public site",
+      "description": "A nonprofit focused on early awareness, resilience education, and practical resources for Veterans, first responders, high-trust professionals, and families.",
+      "url": "https://thewizardnexus.github.io/Zen-Sentry-Foundation/",
+      "repositoryUrl": "https://github.com/TheWizardNexus/Zen-Sentry-Foundation",
+      "image": "https://thewizardnexus.github.io/Zen-Sentry-Foundation/assets/zen-sentry-foundation-readme-header.png",
+      "sourceStatus": "Public repository",
+      "sourceBoundary": "Public repository",
+      "featured": false,
+      "accent": "green"
     }
   ],
+  "pagesReviewedOn": "2026-11-19",
   "publishingNext": [
     {
       "name": "PreCrisis",
       "stage": "Development",
-      "description": "TWiN's core early-signal behavioral-health technology is in development; its first dedicated public project site is forthcoming.",
+      "description": "TWiN's early-signal behavioral-health technology is in development. GitHub Pages is configured; its public address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/PreCrisis/",
       "overviewUrl": "https://www.thewizardnexus.com/"
     },
     {
       "name": "SDE",
       "stage": "Development",
-      "description": "The Synthetic Decision Environment is being developed for emergency interoperability and early-warning work; its first public TWiN project site is forthcoming."
+      "description": "The Synthetic Decision Environment is being developed for emergency interoperability and early-warning work. GitHub Pages is configured; its public address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/SDE/"
     },
     {
       "name": "Warrior Spirit Companion",
       "stage": "Development",
-      "description": "A Veteran-community PreCrisis companion is in development; its first public TWiN project site is forthcoming."
+      "description": "A Veteran-community PreCrisis companion is in development. GitHub Pages is configured; its public address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/Warrior-Spirit-Companion/"
+    },
+    {
+      "name": "Arcane-PM",
+      "stage": "Pages configured",
+      "description": "A public repository with GitHub Pages configured. Its public site address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/Arcane-PM/",
+      "overviewUrl": "https://github.com/TheWizardNexus/Arcane-PM"
+    },
+    {
+      "name": "BOSS",
+      "stage": "Pages configured",
+      "description": "GitHub Pages is configured for this private repository. Its public site address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/BOSS/"
+    },
+    {
+      "name": "Stripe-Server",
+      "stage": "Pages configured",
+      "description": "GitHub Pages is configured for this private repository. Its public site address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/Stripe-Server/"
+    },
+    {
+      "name": "TWiN-Server",
+      "stage": "Pages configured",
+      "description": "GitHub Pages is configured for this private repository. Its public site address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/TWiN-Server/"
+    },
+    {
+      "name": "VECTOR",
+      "stage": "Pages configured",
+      "description": "GitHub Pages is configured for this private repository. Its public site address currently returns 404.",
+      "siteUrl": "https://thewizardnexus.github.io/VECTOR/"
     }
   ]
 }

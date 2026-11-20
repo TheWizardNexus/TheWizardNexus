@@ -121,6 +121,7 @@ const projectGroups = {
   foundation: new Set(["astrolabe", "twin-compass", "kempo", "spellwire"]),
   platform: new Set(["arcane-os", "arcane-os-sdk", "ax", "dbopfs", "dbopfs-studio", "toshokann"]),
   workspace: new Set(["sentinel", "scamurai", "redress"]),
+  community: new Set(["mystics-and-minds", "thewizardnexus-com", "zen-sentry-foundation"]),
 };
 
 function projectMatchesFilter(project) {
@@ -177,7 +178,8 @@ function renderLaunchQueue() {
   if (!list || !state.projects) return;
   list.innerHTML = state.projects.publishingNext.map((project) => {
     const overview = project.overviewUrl ? `<a href="${escapeHtml(project.overviewUrl)}">Open official overview ↗</a>` : "";
-    return `<article class="launch-item"><div><strong>${escapeHtml(project.name)}</strong><small>${escapeHtml(project.stage || "Forming")}</small></div><div><span>${escapeHtml(project.description)}</span>${overview}</div></article>`;
+    const site = project.siteUrl ? `<a href="${escapeHtml(project.siteUrl)}">Pages address (currently unavailable) ↗</a>` : "";
+    return `<article class="launch-item"><div><strong>${escapeHtml(project.name)}</strong><small>${escapeHtml(project.stage || "Forming")}</small></div><div><span>${escapeHtml(project.description)}</span>${overview}${site}</div></article>`;
   }).join("");
 }
 

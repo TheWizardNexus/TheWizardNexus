@@ -536,7 +536,16 @@ const readmeSummary = `${readmeStart}
   <a href="https://thewizardnexus.github.io/TheWizardNexus/"><strong>Navigate the live TWiN ecosystem atlas →</strong></a>
 </p>
 ${readmeEnd}`;
-const updatedReadme = readme.replace(readmePattern, readmeSummary);
+const publicRepositoriesStart = "<!-- profile-public-repositories:start -->";
+const publicRepositoriesEnd = "<!-- profile-public-repositories:end -->";
+const publicRepositoriesPattern = new RegExp(`${publicRepositoriesStart}[\\s\\S]*?${publicRepositoriesEnd}`);
+const publicRepositoriesSummary = `${publicRepositoriesStart}
+<ul>
+${[...repositories].sort((left, right) => left.name.localeCompare(right.name)).map((repo) => `  <li><a href="${escapeXml(repo.url)}">${escapeXml(repo.name)}</a></li>`).join("\n")}
+</ul>
+${publicRepositoriesEnd}`;
+const updatedReadme = readme.replace(readmePattern, readmeSummary)
+  .replace(publicRepositoriesPattern, publicRepositoriesSummary);
 const latestRepositoryUpdate = repositories
   .map((repo) => repo.updatedAt)
   .filter(Boolean)

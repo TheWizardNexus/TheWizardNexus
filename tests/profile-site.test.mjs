@@ -16,8 +16,8 @@ test("curated ecosystem accounts for every published interface without confusing
   const urls = projects.published.map((project) => project.url);
   const stages = new Map(projects.published.map((project) => [project.slug, project.stage]));
 
-  assert.equal(projects.published.length, 13);
-  assert.equal(projects.publishingNext.length, 3);
+  assert.equal(projects.published.length, 16);
+  assert.equal(projects.publishingNext.length, 8);
   assert.equal(new Set(slugs).size, slugs.length);
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(projects.published.every((project) => project.url.startsWith("https://")));
@@ -25,7 +25,7 @@ test("curated ecosystem accounts for every published interface without confusing
   assert.ok(projects.published.every((project) => project.sourceBoundary.trim().length > 0));
   assert.ok(projects.published.every((project) => project.maturity.trim().length > 0));
   assert.ok(projects.published.every((project) => project.stage.trim().length > 0));
-  assert.ok(projects.publishingNext.every((project) => project.stage === "Development"));
+  assert.ok(projects.publishingNext.every((project) => project.stage.trim().length > 0));
   assert.equal(stages.get("arcane-os"), "Development");
   assert.equal(stages.get("dbopfs"), "Released 1.0.0");
   assert.equal(stages.get("twin-compass"), "Released 1.0.0");
