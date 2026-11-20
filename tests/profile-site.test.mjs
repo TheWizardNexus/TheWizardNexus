@@ -222,7 +222,7 @@ test("the public nexus uses focused pages while preserving the complete ecosyste
   assert.match(errorPage, /href="\/TheWizardNexus\/ecosystem\.html"/);
   for (const html of pages) {
     assert.match(html, /href="styles\.css"/);
-    assert.match(html, /src="app\.js"/);
+    assert.match(html, /src="app\.js\?v=2026-11-19"/);
     assert.match(html, /class="site-header"/);
   }
   assert.match(script, /data\/projects\.json/);
